@@ -14,8 +14,8 @@ namespace Practical_2
             Console.WriteLine("Enter third number : ");
             int thirdCorner = int.Parse(Console.ReadLine());
 
-            if ((firstCorner + secondCorner > thirdCorner) ||
-                (secondCorner + thirdCorner > firstCorner) ||
+            if ((firstCorner + secondCorner > thirdCorner) &&
+                (secondCorner + thirdCorner > firstCorner) &&
                 (thirdCorner + firstCorner > secondCorner))
             {
                 Console.WriteLine("This could be a triangle!");
