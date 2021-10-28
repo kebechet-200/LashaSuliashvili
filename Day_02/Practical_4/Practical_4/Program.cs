@@ -9,45 +9,47 @@ namespace Practical_4
             Console.WriteLine("Enter your birth year : ");
             int birthYear = int.Parse(Console.ReadLine());
             int modifiedYear = birthYear % 12;
+            string generateYear = "";
             switch (modifiedYear)
             {
                 case 0:
-                    Console.WriteLine($"{birthYear} was a Monkey year");
+                    generateYear = "Monkey";
                     break;
                 case 1:
-                    Console.WriteLine($"{birthYear} was a Rooster year");
+                    generateYear = "Rooster";
                     break;
                 case 2:
-                    Console.WriteLine($"{birthYear} was a Dog year");
+                    generateYear = "Dog";
                     break;
                 case 3:
-                    Console.WriteLine($"{birthYear} was a Pig year");
+                    generateYear = "Pig";
                     break;
                 case 4:
-                    Console.WriteLine($"{birthYear} was a Rat year");
+                    generateYear = "Rat";
                     break;
                 case 5:
-                    Console.WriteLine($"{birthYear} was a Ox year");
+                    generateYear = "Ox";
                     break;
                 case 6:
-                    Console.WriteLine($"{birthYear} was a Tiger year");
+                    generateYear = "Tigar";
                     break;
                 case 7:
-                    Console.WriteLine($"{birthYear} was a Rabbit year");
+                    generateYear = "Rabbit";
                     break;
                 case 8:
-                    Console.WriteLine($"{birthYear} was a Dragon year");
+                    generateYear = "Dragon";
                     break;
                 case 9:
-                    Console.WriteLine($"{birthYear} was a Snake year");
+                    generateYear = "Snake";
                     break;
                 case 10:
-                    Console.WriteLine($"{birthYear} was a Horse year");
+                    generateYear = "Horse";
                     break;
                 case 11:
-                    Console.WriteLine($"{birthYear} was a Goat year");
+                    generateYear = "Goat";
                     break;
             }
+            Console.WriteLine($"{birthYear} was a {generateYear} year.");
         }
     }
 }
