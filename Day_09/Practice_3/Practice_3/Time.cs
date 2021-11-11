@@ -27,7 +27,7 @@ namespace Practice_3
             if(Hour != 0)
                 Hour--;
         }
-
+        
         public void AddSecond()
         {
             if(Second < 59)
