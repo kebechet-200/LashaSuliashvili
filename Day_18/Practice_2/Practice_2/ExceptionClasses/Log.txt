@@ -1,0 +1,6 @@
+﻿Exception of type 'Practice_2.ExceptionClasses.CurrentCityDoesNotInFileException' was thrown.
+Arsebuli qveyana ar idzebneba failshi
+Arsebuli qveyana ar idzebneba failshi
+Arsebuli qveyana ar idzebneba failshi
+shemotanili qalaqi tabaxmela ar idzebneba failshi
+shemotanili qveyana albania ar idzebneba failshi
