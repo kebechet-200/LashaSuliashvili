@@ -1,0 +1,4 @@
+﻿1)romel tsels mokhda didgoris brdzola?|a)1924|b)1121*|c)2016|d)1621
+2).net shi structura aris|a)ValueType*|b)ReferenceType|c)Arcerti|d)Tuple
+3)ra simboloti aginishneba mendeleevis sistemaSi tskalbadi?|a)H*|b)O|c)H2O|d)O2
+blablabla|a)blablabla|b)blablabla|c)blablabla|d)blablabla*
