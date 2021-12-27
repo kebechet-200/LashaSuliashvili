@@ -1,0 +1,10 @@
+﻿1|Lasha
+2|Beka
+3|Dimitri
+4|Lado
+5|Giorgi
+6|Nugzari
+7|Jemali
+8|Petre
+9|Pavle
+10|Ivane
