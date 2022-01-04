@@ -1,9 +1,11 @@
 ﻿using System.Threading.Tasks;
+using System;
 
 namespace Practice_2
 {
     public class ElectricCar
     {
+        
         public int BatteryLevel { get; set; }
         public string Model { get; set; }
         public int Year { get; set; }
@@ -14,7 +16,7 @@ namespace Practice_2
             {
                 Task.Delay(10000);
                 BatteryLevel += 5;
-            }
+           }
         }
     }
 }
