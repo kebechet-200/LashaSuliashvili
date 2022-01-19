@@ -63,9 +63,9 @@ namespace Practice_1.Controllers
         
         [HttpPut("Update")]
 
-        public async Task<IActionResult> Update(int id, Student std)
+        public async Task<IActionResult> Update(Student std)
         {
-            await _StudentsService.UpdateStudentAsync(id, std);
+            await _StudentsService.UpdateStudentAsync(std);
 
             return Ok();
         }

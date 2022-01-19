@@ -73,10 +73,10 @@ namespace StudentService
             await Task.CompletedTask;
         }
 
-        public async Task UpdateStudentAsync(int id, Student std)
+        public async Task UpdateStudentAsync(Student std)
         {
             var student = (from s in _students
-                          where s.Id == id
+                          where s.Id == std.Id
                           select s).FirstOrDefault();
 
             if (student == null)
