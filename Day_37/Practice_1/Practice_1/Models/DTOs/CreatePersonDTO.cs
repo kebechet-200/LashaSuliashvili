@@ -21,7 +21,7 @@ namespace Practice_1.Models.DTOs
         public int Age { get; set; }
 
         [Required]
-        [EmailAddress]
+        [RegularExpression(@"^([\w\.\-]+)@(gmail|yahoo+)((\.com)+)$", ErrorMessage = "You must enter gmail or yahoo's gmail.")]
         public string Email { get; set; }
 
         [Required]
