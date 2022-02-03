@@ -1,0 +1,354 @@
+2022-01-30 18:01:39.868 +01:00 [INF] Now listening on: https://localhost:5001
+2022-01-30 18:01:39.978 +01:00 [INF] Now listening on: http://localhost:5000
+2022-01-30 18:01:39.981 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-30 18:01:39.982 +01:00 [INF] Hosting environment: Development
+2022-01-30 18:01:39.984 +01:00 [INF] Content root path: C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\Practice_1
+2022-01-30 18:01:40.991 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Persons  
+2022-01-30 18:01:41.085 +01:00 [INF] Executing endpoint 'Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1)'
+2022-01-30 18:01:41.148 +01:00 [INF] Route matched with {action = "GetAllPerson", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Practice_1.Models.DTOs.GetPersonDTO]] GetAllPersonAsync() on controller Practice_1.Controllers.PersonsController (Practice_1).
+2022-01-30 18:01:41.290 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Practice_1.Models.DTOs.GetPersonDTO, Practice_1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-30 18:01:41.338 +01:00 [INF] Executed action Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1) in 165.8046ms
+2022-01-30 18:01:41.358 +01:00 [INF] Executed endpoint 'Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1)'
+2022-01-30 18:01:41.364 +01:00 [INF] HTTP GET /api/Persons responded 200 in 314.1254 ms
+2022-01-30 18:01:41.380 +01:00 [INF] Request finished in 396.7787ms 200 application/json; charset=utf-8
+2022-01-30 18:01:52.167 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Persons application/json 312
+2022-01-30 18:01:52.174 +01:00 [INF] Executing endpoint 'Practice_1.Controllers.PersonsController.AddPerson (Practice_1)'
+2022-01-30 18:01:52.192 +01:00 [INF] Route matched with {action = "AddPerson", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPerson(Practice_1.Models.DTOs.CreatePersonDTO) on controller Practice_1.Controllers.PersonsController (Practice_1).
+2022-01-30 18:01:52.237 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2022-01-30 18:01:52.255 +01:00 [INF] Executed action Practice_1.Controllers.PersonsController.AddPerson (Practice_1) in 59.4296ms
+2022-01-30 18:01:52.256 +01:00 [INF] Executed endpoint 'Practice_1.Controllers.PersonsController.AddPerson (Practice_1)'
+2022-01-30 18:01:52.258 +01:00 [INF] HTTP POST /api/Persons responded 400 in 85.4179 ms
+2022-01-30 18:01:52.260 +01:00 [INF] Request finished in 93.6104ms 400 application/problem+json; charset=utf-8
+2022-01-30 18:02:53.480 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Persons application/json 317
+2022-01-30 18:02:53.484 +01:00 [INF] Executing endpoint 'Practice_1.Controllers.PersonsController.AddPerson (Practice_1)'
+2022-01-30 18:02:53.486 +01:00 [INF] Route matched with {action = "AddPerson", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPerson(Practice_1.Models.DTOs.CreatePersonDTO) on controller Practice_1.Controllers.PersonsController (Practice_1).
+2022-01-30 18:02:53.494 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2022-01-30 18:02:53.500 +01:00 [INF] Executed action Practice_1.Controllers.PersonsController.AddPerson (Practice_1) in 9.3352ms
+2022-01-30 18:02:53.502 +01:00 [INF] Executed endpoint 'Practice_1.Controllers.PersonsController.AddPerson (Practice_1)'
+2022-01-30 18:02:53.510 +01:00 [INF] HTTP POST /api/Persons responded 400 in 25.5211 ms
+2022-01-30 18:02:53.519 +01:00 [INF] Request finished in 39.385ms 400 application/problem+json; charset=utf-8
+2022-01-30 18:07:09.795 +01:00 [INF] Now listening on: https://localhost:5001
+2022-01-30 18:07:09.889 +01:00 [INF] Now listening on: http://localhost:5000
+2022-01-30 18:07:09.891 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-30 18:07:09.892 +01:00 [INF] Hosting environment: Development
+2022-01-30 18:07:09.893 +01:00 [INF] Content root path: C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\Practice_1
+2022-01-30 18:07:10.725 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Persons  
+2022-01-30 18:07:29.874 +01:00 [INF] Executing endpoint 'Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1)'
+2022-01-30 18:07:29.940 +01:00 [INF] Route matched with {action = "GetAllPerson", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Practice_1.Models.DTOs.GetPersonDTO]] GetAllPersonAsync() on controller Practice_1.Controllers.PersonsController (Practice_1).
+2022-01-30 18:07:30.046 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Practice_1.Models.DTOs.GetPersonDTO, Practice_1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-30 18:07:30.083 +01:00 [INF] Executed action Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1) in 131.829ms
+2022-01-30 18:07:30.088 +01:00 [INF] Executed endpoint 'Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1)'
+2022-01-30 18:07:30.094 +01:00 [INF] HTTP GET /api/Persons responded 200 in 249.5740 ms
+2022-01-30 18:07:30.902 +01:00 [INF] Request finished in 20180.9088ms 200 application/json; charset=utf-8
+2022-01-30 18:07:39.221 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Persons application/json 317
+2022-01-30 18:07:45.905 +01:00 [INF] Executing endpoint 'Practice_1.Controllers.PersonsController.AddPerson (Practice_1)'
+2022-01-30 18:07:45.921 +01:00 [INF] Route matched with {action = "AddPerson", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPerson(Practice_1.Models.DTOs.CreatePersonDTO) on controller Practice_1.Controllers.PersonsController (Practice_1).
+2022-01-30 18:07:45.989 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2022-01-30 18:07:45.997 +01:00 [INF] Executed action Practice_1.Controllers.PersonsController.AddPerson (Practice_1) in 71.1996ms
+2022-01-30 18:07:45.999 +01:00 [INF] Executed endpoint 'Practice_1.Controllers.PersonsController.AddPerson (Practice_1)'
+2022-01-30 18:07:46.000 +01:00 [INF] HTTP POST /api/Persons responded 400 in 96.4422 ms
+2022-01-30 18:29:21.391 +01:00 [INF] Now listening on: https://localhost:5001
+2022-01-30 18:29:21.449 +01:00 [INF] Now listening on: http://localhost:5000
+2022-01-30 18:29:21.451 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-30 18:29:21.452 +01:00 [INF] Hosting environment: Development
+2022-01-30 18:29:21.454 +01:00 [INF] Content root path: C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\Practice_1
+2022-01-30 18:29:22.160 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Persons  
+2022-01-30 18:29:22.224 +01:00 [INF] Succeed!
+2022-01-30 18:29:22.276 +01:00 [INF] Executing endpoint 'Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1)'
+2022-01-30 18:29:22.385 +01:00 [INF] Route matched with {action = "GetAllPerson", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Practice_1.Models.DTOs.GetPersonDTO]] GetAllPersonAsync() on controller Practice_1.Controllers.PersonsController (Practice_1).
+2022-01-30 18:29:22.945 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Practice_1.Models.DTOs.GetPersonDTO, Practice_1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-30 18:29:23.282 +01:00 [INF] Executed action Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1) in 883.8692ms
+2022-01-30 18:29:23.290 +01:00 [INF] Executed endpoint 'Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1)'
+2022-01-30 18:29:23.295 +01:00 [INF] HTTP GET /api/Persons responded 200 in 1063.8361 ms
+2022-01-30 18:29:23.752 +01:00 [INF] Request finished in 1599.9835ms 200 application/json; charset=utf-8
+2022-01-30 18:29:34.293 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Persons/2321  
+2022-01-30 18:29:34.298 +01:00 [INF] Succeed!
+2022-01-30 18:29:34.299 +01:00 [INF] Executing endpoint 'Practice_1.Controllers.PersonsController.GetPersonAsync (Practice_1)'
+2022-01-30 18:29:34.319 +01:00 [INF] Route matched with {action = "GetPerson", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPersonAsync(System.String) on controller Practice_1.Controllers.PersonsController (Practice_1).
+2022-01-30 18:29:34.502 +01:00 [INF] Executed action Practice_1.Controllers.PersonsController.GetPersonAsync (Practice_1) in 179.8332ms
+2022-01-30 18:29:34.504 +01:00 [INF] Executed endpoint 'Practice_1.Controllers.PersonsController.GetPersonAsync (Practice_1)'
+2022-01-30 18:29:34.507 +01:00 [ERR] HTTP GET /api/Persons/2321 responded 500 in 207.9561 ms
+PersonService.Exceptions.EmptyDataException: Data is Empty
+   at PersonService.PersonsService.GetAsync(String personalNumber) in C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\PersonService\PersonsService.cs:line 49
+   at Practice_1.Controllers.PersonsController.GetPersonAsync(String personalNumber) in C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\Practice_1\Controllers\PersonsController.cs:line 26
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-01-30 18:29:34.941 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at Practice_1.Infrastructure.Middlewares.ExceptionHandlingMiddleware.HandleExceptionAsync(HttpContext context, Exception ex) in C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\Practice_1\Infrastructure\Middlewares\ExceptionHandlingMiddleware.cs:line 50
+   at Practice_1.Infrastructure.Middlewares.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\Practice_1\Infrastructure\Middlewares\ExceptionHandlingMiddleware.cs:line 40
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-01-30 18:29:35.167 +01:00 [INF] Request finished in 874.7392ms 500 text/html; charset=utf-8
+2022-01-30 18:29:35.219 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js  
+2022-01-30 18:29:35.231 +01:00 [INF] Request finished in 12.0934ms 200 application/javascript; charset=utf-8
+2022-01-30 18:30:18.084 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Persons application/json 317
+2022-01-30 18:30:18.091 +01:00 [INF] Succeed!
+2022-01-30 18:30:18.093 +01:00 [INF] Executing endpoint 'Practice_1.Controllers.PersonsController.AddPerson (Practice_1)'
+2022-01-30 18:30:18.099 +01:00 [INF] Route matched with {action = "AddPerson", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPerson(Practice_1.Models.DTOs.CreatePersonDTO) on controller Practice_1.Controllers.PersonsController (Practice_1).
+2022-01-30 18:30:18.130 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2022-01-30 18:30:18.134 +01:00 [INF] Executed action Practice_1.Controllers.PersonsController.AddPerson (Practice_1) in 32.0449ms
+2022-01-30 18:30:18.136 +01:00 [INF] Executed endpoint 'Practice_1.Controllers.PersonsController.AddPerson (Practice_1)'
+2022-01-30 18:30:18.138 +01:00 [INF] HTTP POST /api/Persons responded 400 in 45.3917 ms
+2022-01-30 18:30:18.142 +01:00 [INF] Request finished in 58.8319ms 400 application/problem+json; charset=utf-8
+2022-01-30 18:35:33.588 +01:00 [INF] Now listening on: https://localhost:5001
+2022-01-30 18:35:33.673 +01:00 [INF] Now listening on: http://localhost:5000
+2022-01-30 18:35:33.675 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-30 18:35:33.677 +01:00 [INF] Hosting environment: Development
+2022-01-30 18:35:33.678 +01:00 [INF] Content root path: C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\Practice_1
+2022-01-30 18:35:34.650 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Persons  
+2022-01-30 18:35:34.702 +01:00 [INF] Succeed!
+2022-01-30 18:35:34.743 +01:00 [INF] Executing endpoint 'Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1)'
+2022-01-30 18:35:34.798 +01:00 [INF] Route matched with {action = "GetAllPerson", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Practice_1.Models.DTOs.GetPersonDTO]] GetAllPersonAsync() on controller Practice_1.Controllers.PersonsController (Practice_1).
+2022-01-30 18:35:34.900 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Practice_1.Models.DTOs.GetPersonDTO, Practice_1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-30 18:35:34.941 +01:00 [INF] Executed action Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1) in 126.3127ms
+2022-01-30 18:35:34.957 +01:00 [INF] Executed endpoint 'Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1)'
+2022-01-30 18:35:34.960 +01:00 [INF] HTTP GET /api/Persons responded 200 in 250.8030 ms
+2022-01-30 18:35:34.975 +01:00 [INF] Request finished in 331.4242ms 200 application/json; charset=utf-8
+2022-01-30 18:35:40.159 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Persons/321  
+2022-01-30 18:35:40.163 +01:00 [INF] Succeed!
+2022-01-30 18:35:40.167 +01:00 [INF] Executing endpoint 'Practice_1.Controllers.PersonsController.GetPersonAsync (Practice_1)'
+2022-01-30 18:35:40.195 +01:00 [INF] Route matched with {action = "GetPerson", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPersonAsync(System.String) on controller Practice_1.Controllers.PersonsController (Practice_1).
+2022-01-30 18:35:40.376 +01:00 [INF] Executed action Practice_1.Controllers.PersonsController.GetPersonAsync (Practice_1) in 176.0715ms
+2022-01-30 18:35:40.379 +01:00 [INF] Executed endpoint 'Practice_1.Controllers.PersonsController.GetPersonAsync (Practice_1)'
+2022-01-30 18:35:40.381 +01:00 [ERR] HTTP GET /api/Persons/321 responded 500 in 215.4473 ms
+PersonService.Exceptions.EmptyDataException: Data is Empty
+   at PersonService.PersonsService.GetAsync(String personalNumber) in C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\PersonService\PersonsService.cs:line 49
+   at Practice_1.Controllers.PersonsController.GetPersonAsync(String personalNumber) in C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\Practice_1\Controllers\PersonsController.cs:line 26
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-01-30 18:35:40.793 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at Practice_1.Infrastructure.Middlewares.ExceptionHandlingMiddleware.HandleExceptionAsync(HttpContext context, Exception ex) in C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\Practice_1\Infrastructure\Middlewares\ExceptionHandlingMiddleware.cs:line 50
+   at Practice_1.Infrastructure.Middlewares.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\Practice_1\Infrastructure\Middlewares\ExceptionHandlingMiddleware.cs:line 40
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-01-30 18:35:40.913 +01:00 [INF] Request finished in 754.2333ms 500 text/html; charset=utf-8
+2022-01-30 18:35:40.962 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js  
+2022-01-30 18:35:40.975 +01:00 [INF] Request finished in 12.7813ms 200 application/javascript; charset=utf-8
+2022-01-30 18:35:55.474 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Persons application/json 317
+2022-01-30 18:35:55.485 +01:00 [INF] Succeed!
+2022-01-30 18:35:55.488 +01:00 [INF] Executing endpoint 'Practice_1.Controllers.PersonsController.AddPerson (Practice_1)'
+2022-01-30 18:35:55.499 +01:00 [INF] Route matched with {action = "AddPerson", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPerson(Practice_1.Models.DTOs.CreatePersonDTO) on controller Practice_1.Controllers.PersonsController (Practice_1).
+2022-01-30 18:35:55.539 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2022-01-30 18:35:55.544 +01:00 [INF] Executed action Practice_1.Controllers.PersonsController.AddPerson (Practice_1) in 35.553ms
+2022-01-30 18:35:55.546 +01:00 [INF] Executed endpoint 'Practice_1.Controllers.PersonsController.AddPerson (Practice_1)'
+2022-01-30 18:35:55.549 +01:00 [INF] HTTP POST /api/Persons responded 400 in 61.6970 ms
+2022-01-30 18:35:55.556 +01:00 [INF] Request finished in 81.8491ms 400 application/problem+json; charset=utf-8
+2022-01-30 18:36:08.585 +01:00 [INF] Application is shutting down...
+2022-01-30 18:37:11.932 +01:00 [INF] Now listening on: https://localhost:5001
+2022-01-30 18:37:12.028 +01:00 [INF] Now listening on: http://localhost:5000
+2022-01-30 18:37:12.030 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-30 18:37:12.031 +01:00 [INF] Hosting environment: Development
+2022-01-30 18:37:12.032 +01:00 [INF] Content root path: C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\Practice_1
+2022-01-30 18:37:13.193 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Persons  
+2022-01-30 18:37:20.893 +01:00 [INF] Succeed!
+2022-01-30 18:37:28.179 +01:00 [INF] Executing endpoint 'Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1)'
+2022-01-30 18:37:28.236 +01:00 [INF] Route matched with {action = "GetAllPerson", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Practice_1.Models.DTOs.GetPersonDTO]] GetAllPersonAsync() on controller Practice_1.Controllers.PersonsController (Practice_1).
+2022-01-30 18:37:28.342 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Practice_1.Models.DTOs.GetPersonDTO, Practice_1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-30 18:37:28.382 +01:00 [INF] Executed action Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1) in 131.787ms
+2022-01-30 18:37:28.388 +01:00 [INF] Executed endpoint 'Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1)'
+2022-01-30 18:37:28.395 +01:00 [INF] HTTP GET /api/Persons responded 200 in 235.6402 ms
+2022-01-30 18:37:30.937 +01:00 [INF] Request finished in 17748.4485ms 200 application/json; charset=utf-8
+2022-01-30 18:37:39.330 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Persons application/json 317
+2022-01-30 18:42:23.627 +01:00 [INF] Succeed!
+2022-01-30 18:42:24.033 +01:00 [INF] Executing endpoint 'Practice_1.Controllers.PersonsController.AddPerson (Practice_1)'
+2022-01-30 18:42:24.050 +01:00 [INF] Route matched with {action = "AddPerson", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPerson(Practice_1.Models.DTOs.CreatePersonDTO) on controller Practice_1.Controllers.PersonsController (Practice_1).
+2022-01-30 18:42:24.098 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2022-01-30 18:42:24.103 +01:00 [INF] Executed action Practice_1.Controllers.PersonsController.AddPerson (Practice_1) in 47.741ms
+2022-01-30 18:42:24.105 +01:00 [INF] Executed endpoint 'Practice_1.Controllers.PersonsController.AddPerson (Practice_1)'
+2022-01-30 18:42:24.108 +01:00 [INF] HTTP POST /api/Persons responded 400 in 74.9768 ms
+2022-01-30 18:42:25.786 +01:00 [INF] Request finished in 286456.1692ms 400 application/problem+json; charset=utf-8
+2022-01-30 18:42:34.061 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Persons application/json 317
+2022-01-30 18:43:20.690 +01:00 [INF] Now listening on: https://localhost:5001
+2022-01-30 18:43:20.766 +01:00 [INF] Now listening on: http://localhost:5000
+2022-01-30 18:43:20.767 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-30 18:43:20.768 +01:00 [INF] Hosting environment: Development
+2022-01-30 18:43:20.769 +01:00 [INF] Content root path: C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\Practice_1
+2022-01-30 18:43:21.616 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Persons  
+2022-01-30 18:43:36.907 +01:00 [INF] Executing endpoint 'Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1)'
+2022-01-30 18:43:36.970 +01:00 [INF] Route matched with {action = "GetAllPerson", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Practice_1.Models.DTOs.GetPersonDTO]] GetAllPersonAsync() on controller Practice_1.Controllers.PersonsController (Practice_1).
+2022-01-30 18:43:37.073 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Practice_1.Models.DTOs.GetPersonDTO, Practice_1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-30 18:43:37.115 +01:00 [INF] Executed action Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1) in 127.0431ms
+2022-01-30 18:43:37.122 +01:00 [INF] Executed endpoint 'Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1)'
+2022-01-30 18:43:37.132 +01:00 [INF] HTTP GET /api/Persons responded 200 in 246.2109 ms
+2022-01-30 18:43:37.137 +01:00 [INF] Succeed!
+2022-01-30 18:43:37.147 +01:00 [INF] Request finished in 15532.9202ms 200 application/json; charset=utf-8
+2022-01-30 18:43:42.301 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Persons/1231  
+2022-01-30 18:43:44.629 +01:00 [INF] Executing endpoint 'Practice_1.Controllers.PersonsController.GetPersonAsync (Practice_1)'
+2022-01-30 18:43:44.649 +01:00 [INF] Route matched with {action = "GetPerson", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPersonAsync(System.String) on controller Practice_1.Controllers.PersonsController (Practice_1).
+2022-01-30 18:43:44.805 +01:00 [INF] Executed action Practice_1.Controllers.PersonsController.GetPersonAsync (Practice_1) in 152.8004ms
+2022-01-30 18:43:44.808 +01:00 [INF] Executed endpoint 'Practice_1.Controllers.PersonsController.GetPersonAsync (Practice_1)'
+2022-01-30 18:43:44.810 +01:00 [ERR] HTTP GET /api/Persons/1231 responded 500 in 181.5783 ms
+PersonService.Exceptions.EmptyDataException: Data is Empty
+   at PersonService.PersonsService.GetAsync(String personalNumber) in C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\PersonService\PersonsService.cs:line 49
+   at Practice_1.Controllers.PersonsController.GetPersonAsync(String personalNumber) in C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\Practice_1\Controllers\PersonsController.cs:line 26
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-01-30 18:43:45.237 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at Practice_1.Infrastructure.Middlewares.ExceptionHandlingMiddleware.HandleExceptionAsync(HttpContext context, Exception ex) in C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\Practice_1\Infrastructure\Middlewares\ExceptionHandlingMiddleware.cs:line 52
+   at Practice_1.Infrastructure.Middlewares.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\Practice_1\Infrastructure\Middlewares\ExceptionHandlingMiddleware.cs:line 42
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-01-30 18:43:45.375 +01:00 [INF] Request finished in 3074.0354ms 500 text/html; charset=utf-8
+2022-01-30 18:43:45.438 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js  
+2022-01-30 18:43:45.445 +01:00 [INF] Request finished in 7.0221ms 200 application/javascript; charset=utf-8
+2022-01-30 18:43:56.819 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Persons application/json 317
+2022-01-30 18:43:59.990 +01:00 [INF] Executing endpoint 'Practice_1.Controllers.PersonsController.AddPerson (Practice_1)'
+2022-01-30 18:43:59.999 +01:00 [INF] Route matched with {action = "AddPerson", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPerson(Practice_1.Models.DTOs.CreatePersonDTO) on controller Practice_1.Controllers.PersonsController (Practice_1).
+2022-01-30 18:44:00.042 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2022-01-30 18:44:00.048 +01:00 [INF] Executed action Practice_1.Controllers.PersonsController.AddPerson (Practice_1) in 40.5693ms
+2022-01-30 18:44:00.050 +01:00 [INF] Executed endpoint 'Practice_1.Controllers.PersonsController.AddPerson (Practice_1)'
+2022-01-30 18:44:00.052 +01:00 [INF] HTTP POST /api/Persons responded 400 in 62.2233 ms
+2022-01-30 18:44:00.061 +01:00 [WRN] client error occured
+2022-01-30 18:44:00.066 +01:00 [INF] Request finished in 3247.015ms 400 application/problem+json; charset=utf-8
+2022-01-30 18:44:18.063 +01:00 [INF] Application is shutting down...
+2022-01-30 19:00:31.750 +01:00 [INF] Now listening on: https://localhost:5001
+2022-01-30 19:00:31.830 +01:00 [INF] Now listening on: http://localhost:5000
+2022-01-30 19:00:31.835 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-30 19:00:31.836 +01:00 [INF] Hosting environment: Development
+2022-01-30 19:00:31.838 +01:00 [INF] Content root path: C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\Practice_1
+2022-01-30 19:00:33.964 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Persons  
+2022-01-30 19:00:43.160 +01:00 [INF] Executing endpoint 'Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1)'
+2022-01-30 19:00:43.293 +01:00 [INF] Route matched with {action = "GetAllPerson", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Practice_1.Models.DTOs.GetPersonDTO]] GetAllPersonAsync() on controller Practice_1.Controllers.PersonsController (Practice_1).
+2022-01-30 19:00:43.489 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Practice_1.Models.DTOs.GetPersonDTO, Practice_1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-30 19:00:43.526 +01:00 [INF] Executed action Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1) in 218.6208ms
+2022-01-30 19:00:43.534 +01:00 [INF] Executed endpoint 'Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1)'
+2022-01-30 19:00:43.539 +01:00 [INF] HTTP GET /api/Persons responded 200 in 441.1302 ms
+2022-01-30 19:00:43.541 +01:00 [INF] 200Succeed!
+2022-01-30 19:00:43.549 +01:00 [INF] Request finished in 9590.4131ms 200 application/json; charset=utf-8
+2022-01-30 19:00:43.801 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2022-01-30 19:00:53.686 +01:00 [INF] HTTP GET /favicon.ico responded 404 in 1.4570 ms
+2022-01-30 19:00:55.540 +01:00 [WRN] 404client error occured
+2022-01-30 19:00:57.312 +01:00 [INF] Request finished in 13510.7607ms 404 
+2022-01-30 19:01:02.826 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Persons/21312  
+2022-01-30 19:01:06.038 +01:00 [INF] Executing endpoint 'Practice_1.Controllers.PersonsController.GetPersonAsync (Practice_1)'
+2022-01-30 19:01:06.053 +01:00 [INF] Route matched with {action = "GetPerson", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPersonAsync(System.String) on controller Practice_1.Controllers.PersonsController (Practice_1).
+2022-01-30 19:11:15.757 +01:00 [INF] Now listening on: https://localhost:5001
+2022-01-30 19:11:15.825 +01:00 [INF] Now listening on: http://localhost:5000
+2022-01-30 19:11:15.826 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-30 19:11:15.828 +01:00 [INF] Hosting environment: Development
+2022-01-30 19:11:15.829 +01:00 [INF] Content root path: C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\Practice_1
+2022-01-30 19:11:17.731 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Persons  
+2022-01-30 19:11:19.441 +01:00 [INF] Executing endpoint 'Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1)'
+2022-01-30 19:11:19.506 +01:00 [INF] Route matched with {action = "GetAllPerson", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Practice_1.Models.DTOs.GetPersonDTO]] GetAllPersonAsync() on controller Practice_1.Controllers.PersonsController (Practice_1).
+2022-01-30 19:11:19.629 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Practice_1.Models.DTOs.GetPersonDTO, Practice_1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-30 19:11:19.669 +01:00 [INF] Executed action Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1) in 149.5206ms
+2022-01-30 19:11:19.675 +01:00 [INF] Executed endpoint 'Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1)'
+2022-01-30 19:11:19.678 +01:00 [INF] HTTP GET /api/Persons responded 200 in 268.4729 ms
+2022-01-30 19:11:19.683 +01:00 [INF] 200 Succeed!
+2022-01-30 19:11:19.692 +01:00 [INF] Request finished in 1969.0391ms 200 application/json; charset=utf-8
+2022-01-30 19:11:19.798 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2022-01-30 19:11:23.376 +01:00 [INF] HTTP GET /favicon.ico responded 404 in 0.3970 ms
+2022-01-30 19:11:23.379 +01:00 [WRN] 404 client error occured
+2022-01-30 19:11:23.381 +01:00 [INF] Request finished in 3582.9937ms 404 
+2022-01-30 19:11:28.726 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Persons/12312  
+2022-01-30 19:11:30.329 +01:00 [INF] Executing endpoint 'Practice_1.Controllers.PersonsController.GetPersonAsync (Practice_1)'
+2022-01-30 19:11:30.347 +01:00 [INF] Route matched with {action = "GetPerson", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPersonAsync(System.String) on controller Practice_1.Controllers.PersonsController (Practice_1).
+2022-01-30 19:11:30.497 +01:00 [INF] Executed action Practice_1.Controllers.PersonsController.GetPersonAsync (Practice_1) in 145.7592ms
+2022-01-30 19:11:30.503 +01:00 [INF] Executed endpoint 'Practice_1.Controllers.PersonsController.GetPersonAsync (Practice_1)'
+2022-01-30 19:11:30.505 +01:00 [ERR] HTTP GET /api/Persons/12312 responded 500 in 177.8595 ms
+PersonService.Exceptions.PersonCouldNotFoundException: This Person Could Not Found
+   at PersonService.PersonsService.GetAsync(String personalNumber) in C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\PersonService\PersonsService.cs:line 49
+   at Practice_1.Controllers.PersonsController.GetPersonAsync(String personalNumber) in C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\Practice_1\Controllers\PersonsController.cs:line 26
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-01-30 19:11:30.993 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at Practice_1.Infrastructure.Middlewares.ExceptionHandlingMiddleware.HandleExceptionAsync(HttpContext context, Exception ex) in C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\Practice_1\Infrastructure\Middlewares\ExceptionHandlingMiddleware.cs:line 51
+   at Practice_1.Infrastructure.Middlewares.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\Practice_1\Infrastructure\Middlewares\ExceptionHandlingMiddleware.cs:line 41
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-01-30 19:11:31.111 +01:00 [INF] Request finished in 2385.5839ms 500 text/html; charset=utf-8
+2022-01-30 19:11:31.239 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js  
+2022-01-30 19:11:31.244 +01:00 [INF] Request finished in 4.2361ms 200 application/javascript; charset=utf-8
+2022-01-30 19:13:34.427 +01:00 [INF] Now listening on: https://localhost:5001
+2022-01-30 19:13:34.479 +01:00 [INF] Now listening on: http://localhost:5000
+2022-01-30 19:13:34.480 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-30 19:13:34.481 +01:00 [INF] Hosting environment: Development
+2022-01-30 19:13:34.482 +01:00 [INF] Content root path: C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\Practice_1
+2022-01-30 19:13:36.306 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Persons  
+2022-01-30 19:13:38.856 +01:00 [INF] Executing endpoint 'Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1)'
+2022-01-30 19:13:38.952 +01:00 [INF] Route matched with {action = "GetAllPerson", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Practice_1.Models.DTOs.GetPersonDTO]] GetAllPersonAsync() on controller Practice_1.Controllers.PersonsController (Practice_1).
+2022-01-30 19:13:39.147 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Practice_1.Models.DTOs.GetPersonDTO, Practice_1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-30 19:13:39.191 +01:00 [INF] Executed action Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1) in 228.7431ms
+2022-01-30 19:13:39.197 +01:00 [INF] Executed endpoint 'Practice_1.Controllers.PersonsController.GetAllPersonAsync (Practice_1)'
+2022-01-30 19:13:39.201 +01:00 [INF] HTTP GET /api/Persons responded 200 in 381.1558 ms
+2022-01-30 19:13:39.204 +01:00 [INF] 200 Succeed!
+2022-01-30 19:13:39.210 +01:00 [INF] Request finished in 2912.8296ms 200 application/json; charset=utf-8
+2022-01-30 19:13:39.335 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2022-01-30 19:13:41.782 +01:00 [INF] HTTP GET /favicon.ico responded 404 in 0.5584 ms
+2022-01-30 19:13:41.785 +01:00 [WRN] 404 client error occured
+2022-01-30 19:13:41.787 +01:00 [INF] Request finished in 2452.5202ms 404 
+2022-01-30 19:13:46.234 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Persons/12312  
+2022-01-30 19:13:47.791 +01:00 [INF] Executing endpoint 'Practice_1.Controllers.PersonsController.GetPersonAsync (Practice_1)'
+2022-01-30 19:13:47.809 +01:00 [INF] Route matched with {action = "GetPerson", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPersonAsync(System.String) on controller Practice_1.Controllers.PersonsController (Practice_1).
+2022-01-30 19:13:47.963 +01:00 [INF] Executed action Practice_1.Controllers.PersonsController.GetPersonAsync (Practice_1) in 148.458ms
+2022-01-30 19:13:47.968 +01:00 [INF] Executed endpoint 'Practice_1.Controllers.PersonsController.GetPersonAsync (Practice_1)'
+2022-01-30 19:13:47.972 +01:00 [ERR] HTTP GET /api/Persons/12312 responded 500 in 182.1228 ms
+PersonService.Exceptions.PersonCouldNotFoundException: This Person Could Not Found
+   at PersonService.PersonsService.GetAsync(String personalNumber) in C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\PersonService\PersonsService.cs:line 49
+   at Practice_1.Controllers.PersonsController.GetPersonAsync(String personalNumber) in C:\Users\Owner\source\repos\LashaSuliashvili\Day_37\Practice_1\Practice_1\Controllers\PersonsController.cs:line 26
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-01-30 19:13:48.330 +01:00 [INF] Request finished in 2097.7202ms 404 application/json
+2022-01-30 19:14:10.171 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Persons application/json 317
+2022-01-30 19:14:14.865 +01:00 [INF] Executing endpoint 'Practice_1.Controllers.PersonsController.AddPerson (Practice_1)'
+2022-01-30 19:14:14.875 +01:00 [INF] Route matched with {action = "AddPerson", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPerson(Practice_1.Models.DTOs.CreatePersonDTO) on controller Practice_1.Controllers.PersonsController (Practice_1).
+2022-01-30 19:14:37.247 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2022-01-30 19:14:37.255 +01:00 [INF] Executed action Practice_1.Controllers.PersonsController.AddPerson (Practice_1) in 22375.0764ms
+2022-01-30 19:14:37.257 +01:00 [INF] Executed endpoint 'Practice_1.Controllers.PersonsController.AddPerson (Practice_1)'
+2022-01-30 19:14:37.259 +01:00 [INF] HTTP POST /api/Persons responded 400 in 22395.1826 ms
+2022-01-30 19:14:45.980 +01:00 [WRN] 400 client error occured
+2022-01-30 19:14:53.587 +01:00 [INF] Request finished in 43412.2652ms 400 application/problem+json; charset=utf-8
