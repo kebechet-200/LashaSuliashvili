@@ -81,6 +81,6 @@ GROUP BY c.CustomerFirstName, c.CustomerLastName
 SELECT c.CustomerFirstName, c.CustomerLastName, c.CustomerAddress FROM Customers as c
 
 -- Task 16
-SELECT CustomerAddress, COUNT(*) AS CustomerNumber FROM Customers
+SELECT CustomerAddress, COUNT(CustomerID) AS NumberOfCustomers FROM Customers
 GROUP BY CustomerAddress
-HAVING COUNT(*) > 1
+HAVING COUNT(CustomerID) > 1
