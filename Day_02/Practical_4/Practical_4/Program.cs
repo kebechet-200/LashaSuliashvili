@@ -9,7 +9,7 @@ namespace Practical_4
             Console.WriteLine("Enter your birth year : ");
             int birthYear = int.Parse(Console.ReadLine());
             int modifiedYear = birthYear % 12;
-            string generateYear = "";
+            string generateYear = string.Empty;
             switch (modifiedYear)
             {
                 case 0:
