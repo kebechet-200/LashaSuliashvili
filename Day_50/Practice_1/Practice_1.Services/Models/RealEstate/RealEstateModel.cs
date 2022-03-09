@@ -11,5 +11,7 @@ namespace Practice_1.Services.Models
 
         public int Price { get; set; }
         public string Owner { get; set; }
+
+        public string Identifier { get; set; }
     }
 }

@@ -51,6 +51,15 @@ namespace EstateManagement.Services.Implementations
             return result.Adapt<RealEstateModel>();
         }
 
+        public async Task<List<RealEstateModel>> GetFilteredAsync(int minPrice, int maxPrice)
+        {
+            var result = await _repo.GetFilteredAsync(minPrice, maxPrice);
+            if (result == null)
+                throw new RealEstateNotFoundException("Real Estate Could Not Found");
+
+            return result.Adapt<List<RealEstateModel>>();
+        }
+
         public async Task UpdateAsync(RealEstateModel person)
         {
             if (!await _repo.Exists(person.Id))
