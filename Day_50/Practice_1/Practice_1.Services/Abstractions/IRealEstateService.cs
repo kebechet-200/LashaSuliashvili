@@ -11,6 +11,8 @@ namespace Practice_1.Services.Abstractions
         Task<List<RealEstateModel>> GetAllAsync();
         Task<RealEstateModel> GetAsync(string identifier);
         Task<int> CreateAsync(RealEstateModel person);
+
+        Task<List<RealEstateModel>> GetFilteredAsync(int minPrice, int maxPrice);
         Task UpdateAsync(RealEstateModel person);
         Task DeleteAsync(int id);
     }

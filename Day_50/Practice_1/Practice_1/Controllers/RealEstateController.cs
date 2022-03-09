@@ -26,22 +26,28 @@ namespace EstateManagement.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAllAsync()
         {
             var result = await _service.GetAllAsync();
             return Ok(result.Adapt<List<RealEstate>>());
         }
 
         [HttpGet("{identifier}")]
-        public async Task<IActionResult> Get(string identifier)
+        public async Task<IActionResult> GetAsync(string identifier)
         {
             var result = await _service.GetAsync(identifier);
             return Ok(result.Adapt<RealEstate>());
         }
 
-        [HttpPost]
+        [HttpGet("{minPrice}&{maxPrice}")]
+        public async Task<IActionResult> GetFilteredAsync(int minPrice, int maxPrice)
+        {
+            var result = await _service.GetFilteredAsync(minPrice, maxPrice);
+            return Ok(result.Adapt<List<RealEstate>>());
+        }
 
-        public async Task<IActionResult> Insert(CreateRealEstateRequest request)
+        [HttpPost]
+        public async Task<IActionResult> InsertAsync(CreateRealEstateRequest request)
         {
             var result = request.Adapt<RealEstateModel>();
             var id = await _service.CreateAsync(result);
@@ -49,7 +55,7 @@ namespace EstateManagement.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> Update(UpdateRealEstateRequest request)
+        public async Task<IActionResult> UpdateAsync(UpdateRealEstateRequest request)
         {
             var result = request.Adapt<RealEstateModel>();
             await _service.UpdateAsync(result);
@@ -57,7 +63,7 @@ namespace EstateManagement.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> DeleteAsync(int id)
         {
             await _service.DeleteAsync(id);
             return Ok("Deleted Successfully");
