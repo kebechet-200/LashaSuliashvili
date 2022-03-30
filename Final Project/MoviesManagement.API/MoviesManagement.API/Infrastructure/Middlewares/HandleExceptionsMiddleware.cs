@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
 using MoviesManagement.API.Global_Exceptions;
 using Newtonsoft.Json;
 using System;
@@ -9,6 +10,10 @@ namespace MoviesManagement.API.Infrastructure.Middlewares
     public class HandleExceptionsMiddleware
     {
         private readonly RequestDelegate _next;
+        private readonly ILogger<HandleExceptionsMiddleware> _logger;
+        private const int serverErrors = 500;
+        private const int clientErrors = 400;
+        private const int succeed = 200;
 
         public HandleExceptionsMiddleware(RequestDelegate next)
         {
@@ -20,6 +25,15 @@ namespace MoviesManagement.API.Infrastructure.Middlewares
             try
             {
                 await _next.Invoke(context);
+
+                if (context.Response.StatusCode >= serverErrors && context.Response.StatusCode < 600)
+                    _logger.LogError($"{context.Response.StatusCode} server error occured");
+
+                if (context.Response.StatusCode >= clientErrors && context.Response.StatusCode < 500)
+                    _logger.LogWarning($"{context.Response.StatusCode} client error occured");
+
+                if (context.Response.StatusCode >= succeed && context.Response.StatusCode < 300)
+                    _logger.LogInformation($"{context.Response.StatusCode} Succeed!");
             }
             catch (Exception ex)
             {

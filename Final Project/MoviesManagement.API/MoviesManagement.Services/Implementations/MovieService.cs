@@ -30,7 +30,7 @@ namespace MoviesManagement.Services.Implementations
         {
             var model =  await _repo.GetAsync(id);
             if (model == null)
-                throw new MovieIsNotAvailableAtCinema("ამ დროისთვის ფილმი კინოში არ გადის");
+                throw new MovieIsNotAvailableAtCinema("თქვენ მიერ არჩეული ფილმი ამ დროისთვის მიუწვდომელია");
             return model.Adapt<MovieModel>();// adapt
         }
     }

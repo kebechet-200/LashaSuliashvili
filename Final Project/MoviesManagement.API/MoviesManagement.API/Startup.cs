@@ -15,6 +15,7 @@ using MoviesManagement.API.Infrastructure.Mapping;
 using MoviesManagement.API.Infrastructure.Middlewares;
 using MoviesManagement.PersistanceDB;
 using MoviesManagement.Services.Models;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -84,6 +85,8 @@ namespace MoviesManagement.API
             app.UseSwaggerUI();
 
             app.UseMiddleware<HandleExceptionsMiddleware>();
+
+            app.UseSerilogRequestLogging();
 
             app.UseHttpsRedirection();
 
