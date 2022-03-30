@@ -17,7 +17,7 @@ namespace MoviesManagement.PersistanceDB.Seed
                     StartDate = DateTime.Now.AddHours(1),
                     Image = "https://fr.web.img4.acsta.net/medias/nmedia/18/69/96/84/19151192.jpg",
                     IsActive = true,
-                    IsExpired = true
+                    IsExpired = false
                 },
 
                 new Movie
@@ -50,7 +50,7 @@ namespace MoviesManagement.PersistanceDB.Seed
                     StartDate = DateTime.Now,
                     Image = "https://fr.web.img6.acsta.net/pictures/19/02/13/12/13/2348674.jpg",
                     IsActive = true,
-                    IsExpired = false
+                    IsExpired = true
                 }
             );
 
