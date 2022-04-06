@@ -4,4 +4,15 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Mapster" Version="7.3.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MoviesManagement.Data.Ef\MoviesManagement.Data.Ef.csproj" />
+    <ProjectReference Include="..\MoviesManagement.PersistanceDB\MoviesManagement.PersistanceDB.csproj" />
+    <ProjectReference Include="..\MoviesManagement.Services\MoviesManagement.Services.csproj" />
+  </ItemGroup>
+
 </Project>

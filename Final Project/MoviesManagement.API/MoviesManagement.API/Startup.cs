@@ -14,6 +14,7 @@ using MoviesManagement.API.Infrastructure.Extensions;
 using MoviesManagement.API.Infrastructure.Mapping;
 using MoviesManagement.API.Infrastructure.Middlewares;
 using MoviesManagement.PersistanceDB;
+using MoviesManagement.PersistanceDB.Seed;
 using MoviesManagement.Services.Models;
 using Serilog;
 using System;

@@ -1,71 +1,75 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿/*!
+ * Start Bootstrap - Shop Homepage (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
 
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
-}
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
+.slide-image {
+    width: 100%;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.carousel-holder {
+    margin-bottom: 30px;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.carousel-control,
+.item {
+    border-radius: 4px;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.container {
+    padding-top: 20px;
 }
 
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+.caption {
+    height: 130px;
+    overflow: hidden;
 }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+.caption h4 {
+    white-space: nowrap;
 }
 
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+.thumbnail img {
+    width: 100%;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
+.card {
+    height:700px;
 }
 
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+.addToCart {
+    padding-right: 10px;
+    padding-left: 10px;
 }
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+
+.thumbnail {
+    padding: 0;
 }
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+
+.navbar {
+    background-image: none;
+}
+
+.movie-column {
+    padding: 3%, 2%;
+}
+
+.row {
+    padding: 100px;
+}
+
+.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 400px;
+}
+
+

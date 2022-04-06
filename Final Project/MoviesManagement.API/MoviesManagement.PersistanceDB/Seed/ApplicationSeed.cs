@@ -1,12 +1,24 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using MoviesManagement.Domain.POCO;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace MoviesManagement.PersistanceDB.Seed
 {
-    public static class SeedMovies
+    public static class ApplicationSeed
     {
         public static void Initialize(this ModelBuilder builder)
+        {
+            SeedMovies(builder);
+            SeedUserAndRole(builder);
+        }
+
+        private static void SeedMovies(ModelBuilder builder)
         {
             builder.Entity<Movie>().HasData(
                 new Movie
@@ -53,8 +65,55 @@ namespace MoviesManagement.PersistanceDB.Seed
                     IsExpired = true
                 }
             );
+        }
 
-            
+        private static void SeedUserAndRole(ModelBuilder builder)
+        {
+            var user = new User
+            {
+                Email = "lasha997@gmail.com",
+                NormalizedEmail = "LASHA997@GMAIL.COM",
+                UserName = "lasha997",
+                NormalizedUserName = "LASHA997",
+                EmailConfirmed = true,
+                PhoneNumberConfirmed = true,
+                SecurityStamp = Guid.NewGuid().ToString("D")
+            };
+
+            var password = new PasswordHasher<User>();
+            var hashed = password.HashPassword(user, "87654321");
+            user.PasswordHash = hashed;
+
+            builder.Entity<IdentityRole>().HasData(
+                new IdentityRole
+                {
+                    Name = "Admin",
+                    NormalizedName = "ADMIN"
+                },
+                new IdentityRole
+                {
+                    Name = "Moderator",
+                    NormalizedName = "MODERATOR"
+                },
+                new IdentityRole
+                {
+                    Name = "Customer",
+                    NormalizedName = "CUSTOMER"
+                }
+            );
+
+            builder.Entity<User>().HasData(
+                new User
+                {
+                    Email = "lasha997@gmail.com",
+                    NormalizedEmail = "LASHA997@GMAIL.COM",
+                    UserName = "lasha997",
+                    NormalizedUserName = "LASHA997",
+                    EmailConfirmed = true,
+                    PhoneNumberConfirmed = true,
+                    SecurityStamp = Guid.NewGuid().ToString("D"),
+                    PasswordHash = hashed
+                });
         }
     }
 }

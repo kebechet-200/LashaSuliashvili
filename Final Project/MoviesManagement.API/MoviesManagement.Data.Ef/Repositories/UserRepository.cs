@@ -9,21 +9,31 @@ namespace MoviesManagement.Data.Ef.Repositories
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
-        public UserRepository(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
+        public UserRepository(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager = roleManager;
         }
 
         public async Task<bool> CreateAsync(User user)
         {
             var register = await _userManager.CreateAsync(user, user.Password);
 
-            if (!register.Succeeded)
-                throw new System.Exception();
-
-            return true;
+            if (register.Succeeded)
+            {
+                var defaultrole = await _roleManager.FindByNameAsync("Customer");
+                if (defaultrole != null)
+                {
+                    IdentityResult roleresult = await _userManager.AddToRoleAsync(user, defaultrole.Name);
+                    if (roleresult.Succeeded)
+                        return true;
+                }
+                return true;
+            }
+            return false;   
         }
 
         public async Task<bool> Exists(User user)
