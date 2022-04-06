@@ -19,21 +19,21 @@
                 if(ticket.UserId == ViewBag.UserId && ticket.State == TicketStatusEnum.Bought)
                 {
                     <div class="card-footer text-center">
-                        <a href="#" class="btn btn-primary">შეძენილია</a>
+                        <a class="btn btn-dark">შეძენილია</a>
                     </div>
                 }
                 else if(ticket.UserId == ViewBag.UserId && ticket.State == TicketStatusEnum.Reserved)
                 {
                     <div class="card-footer">
-                        <a href="#" class="btn btn-primary" asp-controller="Ticket" asp-action="Buy" asp-route-id=@Model.Id>ყიდვა</a>
-                        <a href="#" class="btn btn-primary float-end" asp-controller="Ticket" asp-action="Cancel" asp-route-id=@Model.Id>გაუქმება</a>
+                        <a class="btn btn-primary" asp-controller="Ticket" asp-action="Buy" asp-route-id=@Model.Id>ყიდვა</a>
+                        <a class="btn btn-primary float-end" asp-controller="Ticket" asp-action="Cancel" asp-route-id=@Model.Id>გაუქმება</a>
                     </div>
                 }
                 else
                 {
                     <div class="card-footer">
-                        <a href="#" class="btn btn-primary" asp-controller="Ticket" asp-action="Buy" asp-route-id=@Model.Id>ყიდვა</a>
-                        <a href="#" class="btn btn-primary float-end" asp-controller="Ticket" asp-action="Reserve" asp-route-id=@Model.Id>დაჯავშნა</a>
+                        <a class="btn btn-primary" asp-controller="Ticket" asp-action="Buy" asp-route-id=@Model.Id>ყიდვა</a>
+                        <a class="btn btn-primary float-end" asp-controller="Ticket" asp-action="Reserve" asp-route-id=@Model.Id>დაჯავშნა</a>
                     </div>
                 }
             }
