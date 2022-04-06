@@ -15,9 +15,10 @@ namespace MoviesManagement.API.Infrastructure.Middlewares
         private const int clientErrors = 400;
         private const int succeed = 200;
 
-        public HandleExceptionsMiddleware(RequestDelegate next)
+        public HandleExceptionsMiddleware(RequestDelegate next, ILogger<HandleExceptionsMiddleware> logger)
         {
             _next = next;
+            _logger = logger;
         }
 
         public async Task Invoke(HttpContext context)

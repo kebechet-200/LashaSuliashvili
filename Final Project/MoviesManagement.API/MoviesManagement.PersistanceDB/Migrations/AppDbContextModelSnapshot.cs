@@ -44,6 +44,29 @@ namespace MoviesManagement.PersistanceDB.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "5b59ba7b-d0eb-41a6-9297-1024e8e77351",
+                            ConcurrencyStamp = "ff117620-a6bd-4817-9599-ee4c530c24e9",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = "c6293d6b-6804-45e3-b2c0-efb69155111c",
+                            ConcurrencyStamp = "99b921d2-126c-4d11-afad-5a092dde463e",
+                            Name = "Moderator",
+                            NormalizedName = "MODERATOR"
+                        },
+                        new
+                        {
+                            Id = "52046c58-ecff-41fb-a1d4-815eb7bff828",
+                            ConcurrencyStamp = "e35bba10-ad13-4e5c-9dd9-ca4ae5e640f5",
+                            Name = "Customer",
+                            NormalizedName = "CUSTOMER"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -259,7 +282,7 @@ namespace MoviesManagement.PersistanceDB.Migrations
                             IsActive = true,
                             IsExpired = false,
                             Name = "შეშლილთა კუნძული",
-                            StartDate = new DateTime(2022, 3, 30, 23, 57, 12, 595, DateTimeKind.Local).AddTicks(7563)
+                            StartDate = new DateTime(2022, 4, 6, 11, 48, 5, 584, DateTimeKind.Local).AddTicks(5089)
                         },
                         new
                         {
@@ -269,7 +292,7 @@ namespace MoviesManagement.PersistanceDB.Migrations
                             IsActive = true,
                             IsExpired = false,
                             Name = "ჰარი პოტერი და ფილოსოფიური ქვა",
-                            StartDate = new DateTime(2022, 3, 31, 1, 57, 12, 598, DateTimeKind.Local).AddTicks(7273)
+                            StartDate = new DateTime(2022, 4, 6, 13, 48, 5, 587, DateTimeKind.Local).AddTicks(4412)
                         },
                         new
                         {
@@ -279,7 +302,7 @@ namespace MoviesManagement.PersistanceDB.Migrations
                             IsActive = true,
                             IsExpired = false,
                             Name = "დედოფლის გამბიტი",
-                            StartDate = new DateTime(2022, 3, 31, 6, 57, 12, 598, DateTimeKind.Local).AddTicks(7366)
+                            StartDate = new DateTime(2022, 4, 6, 18, 48, 5, 587, DateTimeKind.Local).AddTicks(4513)
                         },
                         new
                         {
@@ -289,7 +312,7 @@ namespace MoviesManagement.PersistanceDB.Migrations
                             IsActive = true,
                             IsExpired = true,
                             Name = "პროფესორი და შეშლილი",
-                            StartDate = new DateTime(2022, 3, 30, 22, 57, 12, 598, DateTimeKind.Local).AddTicks(7373)
+                            StartDate = new DateTime(2022, 4, 6, 10, 48, 5, 587, DateTimeKind.Local).AddTicks(4520)
                         });
                 });
 
@@ -326,6 +349,24 @@ namespace MoviesManagement.PersistanceDB.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasDiscriminator().HasValue("User");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "52908fee-a3b8-4ba7-ad4b-5ea323cbf445",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "cc4bbf6f-5760-4920-9436-0e2647f27d7d",
+                            Email = "lasha997@gmail.com",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "LASHA997@GMAIL.COM",
+                            NormalizedUserName = "LASHA997",
+                            PasswordHash = "AQAAAAEAACcQAAAAED+yu2hOhU5ij96JfQRPvnRV9ogFf7CGGSi7pGQ5scyfZlux7FNjwdNjYy7MkTBRCQ==",
+                            PhoneNumberConfirmed = true,
+                            SecurityStamp = "30c516ce-9ff1-41a1-b5aa-001389cb3083",
+                            TwoFactorEnabled = false,
+                            UserName = "lasha997"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

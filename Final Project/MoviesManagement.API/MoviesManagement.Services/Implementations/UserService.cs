@@ -15,12 +15,10 @@ namespace MoviesManagement.Services.Implementations
     public class UserService : IUserService
     {
         private readonly IUserRepository _repo;
-        private readonly IJWTService _jwtService;
 
-        public UserService(IUserRepository repo, IJWTService jwtService)
+        public UserService(IUserRepository repo)
         {
             _repo = repo;
-            _jwtService = jwtService;
         }
 
         public async Task<string> AuthenticateAsync(UserModel user)
@@ -34,7 +32,7 @@ namespace MoviesManagement.Services.Implementations
             if (!entity.isRegistered)
                 throw new InvalidLoginAttemptException("იუზერნეიმი ან პაროლი არასწორია.");
 
-            return _jwtService.GenerateSecurityToken(entity.UserId);
+            return entity.UserId;
         }
 
         public async Task<RegisterStatus> CreateAsync(UserModel user)

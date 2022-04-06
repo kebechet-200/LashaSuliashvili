@@ -10,7 +10,7 @@ namespace MoviesManagement.PersistanceDB
     {
         public AppDbContext(DbContextOptions options) : base(options) { }
 
-        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Movie> Movies { get; set; } 
 
         public DbSet<Ticket> Tickets { get; set; }
 

@@ -84,5 +84,13 @@ namespace MoviesManagement.API.Global_Exceptions
             Code = exception.Code;
         }
 
+        private void HandleException(Exception exception)
+        {
+            Status = (int)HttpStatusCode.InternalServerError;
+            Type = "https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1";
+            Title = exception.Message;
+            Code = "Something unexpectable occured";
+        }
+
     }
 }

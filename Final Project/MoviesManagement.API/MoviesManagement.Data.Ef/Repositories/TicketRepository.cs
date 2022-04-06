@@ -30,7 +30,7 @@ namespace MoviesManagement.Data.Ef.Repositories
                 await _repo.UpdateAsync(userTickets);
             }
             else
-                await _repo.AddAsync(userTickets);
+                await _repo.AddAsync(ticket);
         }
 
         public async Task CancelTicket(Ticket ticket)

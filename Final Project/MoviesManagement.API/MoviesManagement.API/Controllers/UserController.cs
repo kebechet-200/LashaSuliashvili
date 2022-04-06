@@ -14,10 +14,12 @@ namespace MoviesManagement.API.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
+        private readonly IJWTService _jwtService;
 
-        public UserController(IUserService userService)
+        public UserController(IUserService userService, IJWTService jwtService)
         {
             _userService = userService;
+            _jwtService = jwtService;
         }
 
         // GET: api/<UserController>/Login
@@ -25,7 +27,8 @@ namespace MoviesManagement.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(AccountLoginDTO account)
         {
-            var token = await _userService.AuthenticateAsync(account.Adapt<UserModel>());
+            var user = await _userService.AuthenticateAsync(account.Adapt<UserModel>());
+            var token = _jwtService.GenerateSecurityToken(user);
             return Ok(token);
         }
 
