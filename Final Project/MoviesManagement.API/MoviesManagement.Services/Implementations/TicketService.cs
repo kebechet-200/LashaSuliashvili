@@ -13,10 +13,12 @@ namespace MoviesManagement.Services.Implementations
     public class TicketService : ITicketService
     {
         private readonly ITicketRepository _ticketRepository;
+        private readonly IMovieRepository _movieRepository;
 
         public TicketService(ITicketRepository ticketRepository, IMovieRepository movieRepository)
         {
             _ticketRepository = ticketRepository;
+            _movieRepository = movieRepository;
         }
 
         public async Task BuyTicketAsync(TicketModel ticket)
@@ -24,6 +26,8 @@ namespace MoviesManagement.Services.Implementations
             if (ticket.State != TicketStatus.Bought)
                 ticket.State = TicketStatus.Bought;
 
+            if (await _movieRepository.MovieStartDate(ticket.MovieId) < DateTime.Now)
+                throw new MovieAlreadyStartedException("ფილმი უკვე დაიწყო");
 
             var ticketEntity = ticket.Adapt<Ticket>();
 
@@ -50,6 +54,8 @@ namespace MoviesManagement.Services.Implementations
             if (ticket.State != TicketStatus.Reserved)
                 ticket.State = TicketStatus.Reserved;
 
+            if (await _movieRepository.MovieStartDate(ticket.MovieId) < DateTime.Now.AddHours(1))
+                throw new MovieStartLessThanOneHourException("ფილმი მალე დაიწყება");
 
             var ticketEntity = ticket.Adapt<Ticket>();
 

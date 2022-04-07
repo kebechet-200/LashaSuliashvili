@@ -7,6 +7,7 @@ using MoviesManagement.Services.Exceptions;
 using MoviesManagement.Services.Models;
 using System;
 using System.Collections.Generic;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,7 +28,7 @@ namespace MoviesManagement.Services.Implementations
             if (!await _repo.Exists(userEntity))
                 throw new UserDoesNotExist("მომხმარებელი ვერ მოიძებნა");
             
-            var entity = await _repo.LoginAsync(userEntity);
+            var entity = await _repo.LoginAsync(userEntity, user.Password);
 
             if (!entity.isRegistered)
                 throw new InvalidLoginAttemptException("იუზერნეიმი ან პაროლი არასწორია.");
@@ -38,10 +39,20 @@ namespace MoviesManagement.Services.Implementations
         public async Task<RegisterStatus> CreateAsync(UserModel user)
         {
             var entity = user.Adapt<User>();
-            if (!await _repo.CreateAsync(entity))
+            if (!await _repo.CreateAsync(entity, user.Password))
                 return RegisterStatus.RegisterFailed;
 
             return RegisterStatus.RegisteredSuccessfully;
+        }
+
+        public async Task SignoutAsync()
+        {
+            await _repo.SignoutAsync();
+        }
+
+        public bool isSigned(ClaimsPrincipal principal)
+        {
+            return _repo.isSigned(principal);
         }
     }
 }

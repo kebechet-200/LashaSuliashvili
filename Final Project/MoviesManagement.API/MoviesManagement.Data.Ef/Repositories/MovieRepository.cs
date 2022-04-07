@@ -28,6 +28,12 @@ namespace MoviesManagement.Data.Ef.Repositories
             return await _repo.Table.Include(x=> x.Tickets).ToListAsync();
         }
 
+        public async Task<DateTime> MovieStartDate(int id)
+        {
+            var movie = await _repo.Table.SingleOrDefaultAsync(x => x.Id == id);
+            return movie.StartDate;
+        }
+
         public async Task<Movie> GetAsync(int id)
         {
             return await _repo.Table.SingleOrDefaultAsync(x => x.Id == id && x.IsActive && !x.IsExpired);
