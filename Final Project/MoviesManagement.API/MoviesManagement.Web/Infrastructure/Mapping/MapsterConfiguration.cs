@@ -22,11 +22,11 @@ namespace MoviesManagement.Web.Infrastructure.Mapping
                 .NewConfig()
                 .TwoWays();
 
-            //TypeAdapterConfig<AccountRegisterDTO, UserModel>
-            //    .NewConfig();
+            TypeAdapterConfig<AccountRegisterViewModel, UserModel>
+                .NewConfig();
 
-            //TypeAdapterConfig<AccountLoginDTO, UserModel>
-            //    .NewConfig();
+            TypeAdapterConfig<AccountLoginViewModel, UserModel>
+                .NewConfig();
 
             TypeAdapterConfig<TicketModel, Ticket>
                 .NewConfig();

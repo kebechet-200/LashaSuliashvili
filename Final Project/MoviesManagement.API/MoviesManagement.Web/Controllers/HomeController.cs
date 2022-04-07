@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace MoviesManagement.Web.Controllers
 {
+    
     public class HomeController : Controller
     {
         private readonly IMovieService _service;

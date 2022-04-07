@@ -6,10 +6,13 @@
 
   <ItemGroup>
     <PackageReference Include="Mapster" Version="7.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MovieManagement.Domain\MoviesManagement.Domain.csproj" />
     <ProjectReference Include="..\MoviesManagement.Data.Ef\MoviesManagement.Data.Ef.csproj" />
     <ProjectReference Include="..\MoviesManagement.PersistanceDB\MoviesManagement.PersistanceDB.csproj" />
     <ProjectReference Include="..\MoviesManagement.Services\MoviesManagement.Services.csproj" />
