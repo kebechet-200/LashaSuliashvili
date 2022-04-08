@@ -1,4 +1,4 @@
-﻿@using MoviesManagement.Web.Models.Enum
+﻿@using MoviesManagement.Services.Enum
 @model MovieViewModel;
 
 <div class="row justify-align-content-center m-3">
@@ -14,37 +14,24 @@
                 <h4 class="cardalert-info">@Model.StartDate</h4>
             </div>
 
-            @if(Model.Tickets.Count > 0)
+            @if(ViewBag.UserTicket == null)
             {
-                @foreach(var ticket in Model.Tickets)
-                {
-                    if(ticket.UserId == ViewBag.UserId && ticket.State == TicketStatusEnum.Bought)
-                    {
-                        <div class="card-footer text-center">
-                            <a class="btn btn-dark">შეძენილია</a>
-                        </div>
-                    }
-                    else if(ticket.UserId == ViewBag.UserId && ticket.State == TicketStatusEnum.Reserved)
-                    {
-                        <div class="card-footer">
-                            <a class="btn btn-primary" asp-controller="Ticket" asp-action="Buy" asp-route-id="@Model.Id">ყიდვა</a>
-                            <a class="btn btn-primary float-end" asp-controller="Ticket" asp-action="Cancel" asp-route-id="@Model.Id">გაუქმება</a>
-                        </div>
-                    }
-                    else
-                    {
-                        <div class="card-footer">
-                            <a class="btn btn-primary" asp-controller="Ticket" asp-action="Buy" asp-route-id="@Model.Id">ყიდვა</a>
-                            <a class="btn btn-primary float-end" asp-controller="Ticket" asp-action="Reserve" asp-route-id="@Model.Id">დაჯავშნა</a>
-                        </div>
-                    }
-                }
+                <div class="card-footer">
+                    <a class="btn btn-primary" asp-controller="Ticket" asp-action="Buy" asp-route-id="@Model.Id">ყიდვა</a>
+                    <a class="btn btn-primary float-end" asp-controller="Ticket" asp-action="Reserve" asp-route-id="@Model.Id">დაჯავშნა</a>
+                </div>
+            }
+            else if(ViewBag.UserTicket.State == TicketStatus.Bought)
+            {
+                <div class="card-footer text-center">
+                    <a class="btn btn-dark">შეძენილია</a>
+                </div>
             }
             else
             {
                 <div class="card-footer">
                     <a class="btn btn-primary" asp-controller="Ticket" asp-action="Buy" asp-route-id="@Model.Id">ყიდვა</a>
-                    <a class="btn btn-primary float-end" asp-controller="Ticket" asp-action="Reserve" asp-route-id="@Model.Id">დაჯავშნა</a>
+                    <a class="btn btn-primary float-end" asp-controller="Ticket" asp-action="Cancel" asp-route-id="@Model.Id">გაუქმება</a>
                 </div>
             }
                 

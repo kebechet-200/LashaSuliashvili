@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using MoviesManagement.Data.Repository_Interfaces;
 using MoviesManagement.Domain.POCO;
+using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
@@ -8,15 +10,17 @@ namespace MoviesManagement.Data.Ef.Repositories
 {
     public  class UserRepository : IUserRepository
     {
+        private readonly IBaseRepository<User> _baseRepository;
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
 
-        public UserRepository(UserManager<User> userManager, SignInManager<User> signInManager, RoleManager<IdentityRole> roleManager)
+        public UserRepository(UserManager<User> userManager, SignInManager<User> signInManager, RoleManager<IdentityRole> roleManager, IBaseRepository<User> baseRepository)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
+            _baseRepository = baseRepository;
         }
 
         public async Task<bool> CreateAsync(User user, string password)
@@ -63,9 +67,38 @@ namespace MoviesManagement.Data.Ef.Repositories
             await _signInManager.SignOutAsync();
         }
 
-        public bool isSigned(ClaimsPrincipal principal)
+        public async Task<List<User>> GetAllAsync()
         {
-            return _signInManager.IsSignedIn(principal);
+            return await _baseRepository.Table.ToListAsync();
+        }
+
+        public async Task<User> GetAsync(string id)
+        {
+            return await _baseRepository.Table.SingleOrDefaultAsync(x => x.Id == id);
+        }
+
+        public async Task<User> GetFullAsync(string id)
+        {
+            return await _baseRepository.Table.Include(x => x.Tickets).SingleOrDefaultAsync(x => x.Id == id);
+        }
+
+        public async Task UpdateAsync(User user)
+        {
+            await _baseRepository.UpdateAsync(user);
+        }
+
+        public async Task DeleteAsync(string id)
+        {
+            var user = await this.GetAsync(id);
+            if (user != null)
+                await _baseRepository.RemoveAsync(user);
+        }
+
+        public async Task ChangeRoleAsync(string id, )
+        {
+            var user = await this.GetAsync(id);
+
+            var roles = await _userManager.GetRolesAsync(user);
         }
     }
 }

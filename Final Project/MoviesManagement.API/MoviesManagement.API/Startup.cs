@@ -71,7 +71,7 @@ namespace MoviesManagement.API
             });
             services.AddTokenAuthentication(Configuration);
             services.Configure<JWTConfiguration>(Configuration.GetSection(nameof(JWTConfiguration)));
-            services.AddIdentity<IdentityUser, IdentityRole>()
+            services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<AppDbContext>();
         }
 

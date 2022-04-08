@@ -49,10 +49,5 @@ namespace MoviesManagement.Services.Implementations
         {
             await _repo.SignoutAsync();
         }
-
-        public bool isSigned(ClaimsPrincipal principal)
-        {
-            return _repo.isSigned(principal);
-        }
     }
 }

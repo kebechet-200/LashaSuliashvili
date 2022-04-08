@@ -1,4 +1,4 @@
-﻿using MoviesManagement.Web.Models.Enum;
+﻿using MoviesManagement.Services.Enum;
 
 namespace MoviesManagement.Web.Models
 {
@@ -7,6 +7,6 @@ namespace MoviesManagement.Web.Models
         public string UserId { get; set; }
         public int MovieId { get; set; }
 
-        public TicketStatusEnum State { get; set; }
+        public TicketStatus State { get; set; }
     }
 }

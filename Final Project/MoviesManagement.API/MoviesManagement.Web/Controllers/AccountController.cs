@@ -31,7 +31,7 @@ namespace MoviesManagement.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login(AccountLoginViewModel model)
+        public async Task<IActionResult> Login(AccountLoginViewModel model, string returnUrl)
         {
             if (!ModelState.IsValid)
                 return View();
@@ -76,10 +76,12 @@ namespace MoviesManagement.Web.Controllers
 
             }
 
-            if (userId != null || userId != string.Empty)
-                return RedirectToAction("Index", "Home");
+            if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+                return Redirect(returnUrl);
 
-            return View();
+            return RedirectToAction("Index", "Home");
+
+
         }
 
         public IActionResult Register()
