@@ -1,5 +1,4 @@
-﻿using MoviesManagement.Web.Models.Enum;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace MoviesManagement.Web.Models

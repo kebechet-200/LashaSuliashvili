@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using MoviesManagement.Services.Abstractions;
 using MoviesManagement.Web.Models;
 using System.Collections.Generic;
+using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
@@ -28,6 +29,11 @@ namespace MoviesManagement.Web.Controllers
         {
             ViewBag.UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var entity = await _service.GetFullAsync(id);
+            var userTicket = entity.Tickets.SingleOrDefault(x => x.UserId == ViewBag.UserId);
+            if (userTicket != null)
+                ViewBag.UserTicket = userTicket;
+            else
+                ViewBag.UserTicket = null;
             return View(entity.Adapt<MovieViewModel>());
         }
     }

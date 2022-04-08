@@ -13,6 +13,9 @@ namespace MoviesManagement.Services.Abstractions
         Task<RegisterStatus> CreateAsync(UserModel user);
         Task<string> AuthenticateAsync(UserModel user);
         Task SignoutAsync();
-        bool isSigned(ClaimsPrincipal principal);
+        Task<List<UserModel>> GetAllAsync();
+        Task<UserModel> GetAsync(string id);
+        Task UpdateAsync(UserModel user);
+        Task DeleteAsync(string id);
     }
 }
