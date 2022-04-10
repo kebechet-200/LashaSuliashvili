@@ -42,7 +42,8 @@ namespace MoviesManagement.API
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddServicesAndRepos();
             services.RegisterMaps();
-            services.AddSwaggerGen(c => {
+            services.AddSwaggerGen(c =>
+            {
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Title = "MovieManagement By Lasha Suliashvili",

@@ -29,11 +29,16 @@ namespace MoviesManagement.Web.Infrastructure.Mapping
                 .NewConfig();
 
             TypeAdapterConfig<TicketModel, Ticket>
-                .NewConfig();
+                .NewConfig()
+                .TwoWays();
+                
 
             TypeAdapterConfig<TicketRequestViewModel, TicketModel>
                 .NewConfig();
 
+            TypeAdapterConfig<UserRoles, UserRolesModel>
+                .NewConfig()
+                .TwoWays();
         }
     }
 }

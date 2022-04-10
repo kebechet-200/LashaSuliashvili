@@ -1,0 +1,25 @@
+﻿@model List<GetUserWithRolesViewModel>;
+
+
+<h1>User Roles</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Roles</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.UserName</td>
+                <td>@string.Join(" , ", user.Roles.ToList())</td>
+                <td>
+                    <a class="btn btn-info" asp-controller="UserRoles" asp-action="Manage" asp-route-userId="@user.UserName">Manage Roles</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

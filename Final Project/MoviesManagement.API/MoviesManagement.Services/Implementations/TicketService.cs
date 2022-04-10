@@ -43,8 +43,13 @@ namespace MoviesManagement.Services.Implementations
                 ticket.State = TicketStatus.Cancelled;
 
             var ticketEntity = ticket.Adapt<Ticket>();
+
             if (!await _ticketRepository.TicketReserveExist(ticketEntity))
-                throw new TicketDoesNotExistException("თქვენ არ შეგიძენიათ ბილეთი, შესაბამისად ვერ გააუქმებთ");
+            {
+                if (await _ticketRepository.TicketBoughtExist(ticketEntity))
+                    throw new TicketDoesNotExistException("გაყიდული ბილეთი უკან არ მიიღება.");
+                throw new TicketDoesNotExistException("თქვენ არ დაგიჯავშნიათ ბილეთი, შესაბამისად ვერ გააუქმებთ");
+            }
 
             await _ticketRepository.CancelTicket(ticketEntity);
         }

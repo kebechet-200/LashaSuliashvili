@@ -11,7 +11,6 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace MoviesManagement.API.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class TicketController : ControllerBase
@@ -23,7 +22,8 @@ namespace MoviesManagement.API.Controllers
         {
             _ticketService = ticketService;
         }
-        
+
+        [Authorize]
         [Route("Buy")]
         [HttpPost]
         public async Task<IActionResult> Buy([FromBody] int movieId)
@@ -34,6 +34,7 @@ namespace MoviesManagement.API.Controllers
             return Ok(TicketStatuses.Bought.ToString());
         }
 
+        [Authorize]
         [Route("Reserve")]
         [HttpPost]
         public async Task<IActionResult> Reserve([FromBody] int movieId)
@@ -44,6 +45,7 @@ namespace MoviesManagement.API.Controllers
             return Ok(TicketStatuses.Reserved.ToString());
         }
 
+        [Authorize]
         [Route("Cancel")]
         [HttpPost]
         public async Task<IActionResult> Cancel([FromBody] int movieId)

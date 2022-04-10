@@ -10,9 +10,9 @@ namespace MoviesManagement.Admin.Infrastructure.Mapping
     {
         public static void RegisterMaps(this IServiceCollection services)
         {
-            //TypeAdapterConfig<MovieModel, Movie>
-            //    .NewConfig()
-            //    .TwoWays();
+            TypeAdapterConfig<MovieModel, Movie>
+                .NewConfig()
+                .TwoWays();
 
             TypeAdapterConfig<UserModel, User>
                 .NewConfig()
@@ -30,6 +30,12 @@ namespace MoviesManagement.Admin.Infrastructure.Mapping
 
             //TypeAdapterConfig<TicketRequestViewModel, TicketModel>
             //    .NewConfig();
+
+            TypeAdapterConfig<UserRolesModel, UserRoles>
+                .NewConfig().TwoWays();
+
+            TypeAdapterConfig<UserRolesModel, GetUserWithRolesViewModel>
+                .NewConfig();
         }
     }
 }
