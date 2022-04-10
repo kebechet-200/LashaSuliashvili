@@ -9,8 +9,5 @@ namespace MoviesManagement.Services.Abstractions
         Task<List<MovieModel>> GetAllAsync();
         Task<MovieModel> GetAsync(int id);
 
-        Task<MovieModel> GetFullAsync(int id);
-
-        Task<List<MovieModel>> GetAllFullAsync();
     }
 }

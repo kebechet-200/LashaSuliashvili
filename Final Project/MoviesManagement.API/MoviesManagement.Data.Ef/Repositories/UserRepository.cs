@@ -41,9 +41,14 @@ namespace MoviesManagement.Data.Ef.Repositories
             return false;   
         }
 
-        public async Task<bool> Exists(User user)
+        public async Task<bool> Exists(string userId)
         {
-            return await _userManager.FindByNameAsync(user.UserName) != null;
+            return await _userManager.FindByIdAsync(userId) != null;
+        }
+
+        public async Task<bool> ExistsName(string username)
+        {
+            return await _userManager.FindByNameAsync(username) != null;
         }
 
         public async Task<(bool isRegistered,string UserId)> LoginAsync(User user, string password)
@@ -72,14 +77,41 @@ namespace MoviesManagement.Data.Ef.Repositories
             return await _baseRepository.Table.ToListAsync();
         }
 
+        public async Task<List<UserRoles>> GetAllUserWithRoles()
+        {
+            var users = await _baseRepository.GetAllAsync();
+            var userRoles = new List<UserRoles>();
+
+            foreach (var user in users)
+            {
+                var tempUserRoles = new UserRoles();
+                tempUserRoles.UserName = user.UserName;
+                tempUserRoles.Roles = await GetUserRolesAsync(user.Id);
+
+                userRoles.Add(tempUserRoles);
+            }
+
+            return userRoles;
+
+        }
+
+        public async Task<List<string>> GetUserRolesAsync(string userId)
+        {
+            if(userId == null)
+                return null;
+
+            var user = await _baseRepository.GetAsync(x => x.Id == userId);
+            return new List<string>(await _userManager.GetRolesAsync(user));
+        }
+
         public async Task<User> GetAsync(string id)
         {
             return await _baseRepository.Table.SingleOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task<User> GetFullAsync(string id)
+        public async Task<User> GetUserWithTicketsAsync(string id)
         {
-            return await _baseRepository.Table.Include(x => x.Tickets).SingleOrDefaultAsync(x => x.Id == id);
+            return await _baseRepository.Table.Include(x => x.Tickets).ThenInclude(x => x.Movie).SingleOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task UpdateAsync(User user)
@@ -94,7 +126,7 @@ namespace MoviesManagement.Data.Ef.Repositories
                 await _baseRepository.RemoveAsync(user);
         }
 
-        public async Task ChangeRoleAsync(string id, )
+        public async Task ChangeRoleAsync(string id)
         {
             var user = await this.GetAsync(id);
 

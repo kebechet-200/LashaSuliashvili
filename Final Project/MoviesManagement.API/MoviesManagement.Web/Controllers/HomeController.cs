@@ -28,7 +28,7 @@ namespace MoviesManagement.Web.Controllers
         public async Task<IActionResult> Details(int id)
         {
             ViewBag.UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var entity = await _service.GetFullAsync(id);
+            var entity = await _service.GetAsync(id);
             var userTicket = entity.Tickets.SingleOrDefault(x => x.UserId == ViewBag.UserId);
             if (userTicket != null)
                 ViewBag.UserTicket = userTicket;

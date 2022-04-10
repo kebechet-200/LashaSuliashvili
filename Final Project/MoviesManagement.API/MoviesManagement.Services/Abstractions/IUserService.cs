@@ -17,5 +17,8 @@ namespace MoviesManagement.Services.Abstractions
         Task<UserModel> GetAsync(string id);
         Task UpdateAsync(UserModel user);
         Task DeleteAsync(string id);
+        Task<List<UserRolesModel>> GetAllUserWithRoles();
+        Task<UserModel> GetUserWithTicketsAsync(string id);
+        Task ChangeRoleAsync(string id);
     }
 }

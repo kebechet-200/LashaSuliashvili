@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Mapster;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using MoviesManagement.Admin.Models;
 using MoviesManagement.Services.Abstractions;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -17,14 +19,16 @@ namespace MoviesManagement.Admin.Controllers
             _userService = userService;
         }
 
+        public async Task<IActionResult> Index()
+        {
+            var users = await _userService.GetAllUserWithRoles();
+            return View(users.Adapt<List<GetUserWithRolesViewModel>>());
+        }
+
         public IActionResult GiveRole()
         {
             return View();
         }
 
-        public async Task<List<IActionResult>> GetAllAsync()
-        {
-            var users = await _userService.
-        }
     }
 }

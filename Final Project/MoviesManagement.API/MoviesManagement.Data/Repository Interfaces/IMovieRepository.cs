@@ -12,9 +12,5 @@ namespace MoviesManagement.Data.Repository_Interfaces
         Task<Movie> GetAsync(int id);
 
         Task<DateTime> MovieStartDate(int id);
-
-        Task<Movie> GetFullAsync(int id);
-
-        Task<List<Movie>> GetAllFullAsync();
     }
 }
