@@ -21,14 +21,14 @@ namespace MoviesManagement.Web.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var moviesEntity = await _service.GetAllAsync();
+            var moviesEntity = await _service.GetAllActiveAsync();
             return View(moviesEntity.Adapt<List<MovieViewModel>>());
         }
 
         public async Task<IActionResult> Details(int id)
         {
             ViewBag.UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var entity = await _service.GetAsync(id);
+            var entity = await _service.GetActiveAsync(id);
             if(ViewBag.UserId != null)
             {
                 var userTicket = entity.Tickets.SingleOrDefault(x => x.UserId == ViewBag.UserId);

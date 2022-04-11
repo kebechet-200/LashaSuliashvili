@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoviesManagement.Data.Ef", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoviesManagement.Web", "MoviesManagement.Web\MoviesManagement.Web.csproj", "{62D7BE52-4ECA-4AD3-A998-71D7DE94FB19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesManagement.Admin", "MoviesManagement.Admin\MoviesManagement.Admin.csproj", "{C55D552F-66F4-4B7F-9FEC-907C050088E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoviesManagement.Admin", "MoviesManagement.Admin\MoviesManagement.Admin.csproj", "{C55D552F-66F4-4B7F-9FEC-907C050088E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesManagement.Worker", "MoviesManagement.Worker\MoviesManagement.Worker.csproj", "{773A3170-8F83-41B5-8360-F4BC4B1C66B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{C55D552F-66F4-4B7F-9FEC-907C050088E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C55D552F-66F4-4B7F-9FEC-907C050088E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C55D552F-66F4-4B7F-9FEC-907C050088E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{773A3170-8F83-41B5-8360-F4BC4B1C66B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{773A3170-8F83-41B5-8360-F4BC4B1C66B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{773A3170-8F83-41B5-8360-F4BC4B1C66B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{773A3170-8F83-41B5-8360-F4BC4B1C66B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

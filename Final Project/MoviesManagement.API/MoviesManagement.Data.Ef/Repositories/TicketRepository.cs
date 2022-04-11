@@ -59,5 +59,20 @@ namespace MoviesManagement.Data.Ef.Repositories
         {
             return await _repo.AnyAsync(x => x.UserId == ticket.UserId && x.MovieId == ticket.MovieId && x.State == TicketEnum.Reserved);
         }
+
+        public async Task CancelExpiredMovieTickets()
+        {
+            var tickets = await _repo.Table
+                .Include(x => x.Movie)
+                .AsNoTracking()
+                .Where(x => x.Movie.StartDate <= DateTime.Now.AddHours(1))
+                .ToListAsync();
+
+            foreach (var ticket in tickets)
+            {
+                ticket.State = TicketEnum.Cancelled;
+                await _repo.UpdateAsync(ticket);
+            }
+        }
     }
 }

@@ -8,9 +8,12 @@ namespace MoviesManagement.Data.Repository_Interfaces
 {
     public interface IMovieRepository
     {
+        Task<List<Movie>> GetAllActiveAsync();
         Task<List<Movie>> GetAllAsync();
+        Task<Movie> GetActiveAsync(int id);
         Task<Movie> GetAsync(int id);
-
         Task<DateTime> MovieStartDate(int id);
+
+        Task MovieExpiration();
     }
 }

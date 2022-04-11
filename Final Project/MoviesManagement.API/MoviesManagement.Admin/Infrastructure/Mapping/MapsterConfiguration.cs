@@ -19,6 +19,10 @@ namespace MoviesManagement.Admin.Infrastructure.Mapping
                 .NewConfig()
                 .TwoWays();
 
+            TypeAdapterConfig<UserModel, UserWithTicketsViewModel>
+                .NewConfig()
+                .TwoWays();
+
             //TypeAdapterConfig<MovieModel, MovieViewModel>
             //    .NewConfig()
             //    .TwoWays();
@@ -26,8 +30,13 @@ namespace MoviesManagement.Admin.Infrastructure.Mapping
             TypeAdapterConfig<LoginViewModel, UserModel>
                 .NewConfig();
 
-            //TypeAdapterConfig<TicketModel, Ticket>
-            //    .NewConfig();
+            TypeAdapterConfig<TicketModel, Ticket>
+                .NewConfig()
+                .TwoWays();
+
+            TypeAdapterConfig<TicketViewModel, TicketModel>
+                .NewConfig()
+                .TwoWays();
 
             //TypeAdapterConfig<TicketRequestViewModel, TicketModel>
             //    .NewConfig();

@@ -1,5 +1,7 @@
 ﻿
 
+using System.Collections.Generic;
+
 namespace MoviesManagement.Services.Models
 {
     public class UserModel
@@ -8,5 +10,6 @@ namespace MoviesManagement.Services.Models
         public string UserName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public List<TicketModel> Tickets { get; set; }
     }
 }
