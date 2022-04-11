@@ -36,7 +36,7 @@ namespace MoviesManagement.Web.Infrastructure.Mapping
             TypeAdapterConfig<TicketRequestViewModel, TicketModel>
                 .NewConfig();
 
-            TypeAdapterConfig<UserRoles, UserRolesModel>
+            TypeAdapterConfig<UserRoles, UserWithRolesModel>
                 .NewConfig()
                 .TwoWays();
         }

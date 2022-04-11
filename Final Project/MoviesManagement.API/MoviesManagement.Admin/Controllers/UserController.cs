@@ -1,9 +1,12 @@
 ﻿using Mapster;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MoviesManagement.Admin.Models;
 using MoviesManagement.Services.Abstractions;
+using MoviesManagement.Services.Models;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace MoviesManagement.Admin.Controllers
@@ -25,10 +28,68 @@ namespace MoviesManagement.Admin.Controllers
             return View(users.Adapt<List<GetUserWithRolesViewModel>>());
         }
 
-        public IActionResult GiveRole()
+        public async Task<IActionResult> Manage(string id)
         {
-            return View();
+            ViewBag.Id = id;
+            var user = await _userService.GetUserName(id);
+            if(user == null)
+            {
+                ViewBag.ErrorMessage = $"User with Id = {id} cannot be found";
+                return View("NotFound");
+            }
+            ViewBag.UserName = user;
+            var manage = new List<ChangeUserRolesViewModel>();
+            foreach (var role in await _userService.GetAllRolesAsync())
+            {
+                var userRole = new ChangeUserRolesViewModel
+                {
+                    RoleId = role.Id,
+                    RoleName = role.Name
+                };
+                if (await _userService.IsInRole(user, role.Name))
+                    userRole.Selected = true;
+                else
+                    userRole.Selected = false;
+                manage.Add(userRole);
+            }
+            return View(manage);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Manage([FromForm] List<ChangeUserRolesViewModel> model, string id)
+        {
+            
+            ViewBag.Id = id;
+            var user = await _userService.GetUserName(id);
+
+            if (user == null)
+            {
+                ViewBag.ErrorMessage = $"User with Id = {id} cannot be found";
+                return View("NotFound");
+            }
+
+            ViewBag.UserName = user;
+            var roles = await _userService.GetUserRolesAsync(id);
+
+            if (roles.Count > 0)
+            {
+                var deleting = await _userService.DeleteUserRoles(user, roles);
+                if (!deleting.Succeeded)
+                {
+                    ModelState.AddModelError("", "მომხმარებელს ამ როლს ვერ წაუშლი");
+                    return View(model);
+                }
+            }
+
+            var adding = await _userService.AddToRolesAsync(user, model.Where(x => x.Selected).Select(y => y.RoleName));
+
+            if (!adding.Succeeded)
+            {
+                ModelState.AddModelError("", "მომხმარებელს ამ როლს ვერ დაუმატებ");
+                return View(model);
+            }
+
+            return RedirectToAction("Index");
+        }
     }
 }

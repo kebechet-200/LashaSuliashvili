@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace MoviesManagement.Web.CustomHealthCheck
 {
-    public class AdminHealthCheck : IHealthCheck
+    public class UserHealthCheck : IHealthCheck
     {
         public async Task<HealthCheckResult> CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken = default)
         {
-            var apiUrl = "https://localhost:44376/swagger/index.html";
+            var apiUrl = "https://localhost:44313";
 
             var client = new HttpClient();
 
@@ -22,10 +22,10 @@ namespace MoviesManagement.Web.CustomHealthCheck
             return response.StatusCode == HttpStatusCode.OK ?
                 await Task.FromResult(new HealthCheckResult(
                       status: HealthStatus.Healthy,
-                      description: "The Admin Panel is healthy")) :
+                      description: "The User Panel is healthy")) :
                 await Task.FromResult(new HealthCheckResult(
                       status: HealthStatus.Unhealthy,
-                      description: "The Admin Panel is sick "));
+                      description: "The User Panel is sick "));
         }
     }
 }

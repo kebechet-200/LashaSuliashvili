@@ -43,7 +43,7 @@ namespace MoviesManagement.Data.Ef
 
         public async Task<T> GetAsync(Expression<Func<T, bool>> expression)
         {
-            return await _dbSet.SingleOrDefaultAsync(expression);
+            return await _dbSet.AsNoTracking().SingleOrDefaultAsync(expression);
         }
 
         public async Task RemoveAsync(T entity)

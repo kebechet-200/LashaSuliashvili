@@ -1,4 +1,5 @@
 ﻿using Mapster;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using MoviesManagement.Admin.Models;
 using MoviesManagement.Domain.POCO;
@@ -31,10 +32,17 @@ namespace MoviesManagement.Admin.Infrastructure.Mapping
             //TypeAdapterConfig<TicketRequestViewModel, TicketModel>
             //    .NewConfig();
 
-            TypeAdapterConfig<UserRolesModel, UserRoles>
-                .NewConfig().TwoWays();
 
-            TypeAdapterConfig<UserRolesModel, GetUserWithRolesViewModel>
+            TypeAdapterConfig<UserWithRolesModel, GetUserWithRolesViewModel>
+                .NewConfig()
+                .TwoWays();
+                
+            TypeAdapterConfig<UserRoles, UserWithRolesModel>
+                .NewConfig()
+                .TwoWays();
+                
+
+            TypeAdapterConfig<IdentityRole, RolesModel>
                 .NewConfig();
         }
     }
