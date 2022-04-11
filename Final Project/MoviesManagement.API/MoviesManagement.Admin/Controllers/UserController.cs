@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MoviesManagement.Admin.Models;
 using MoviesManagement.Services.Abstractions;
+using MoviesManagement.Services.Enum;
 using MoviesManagement.Services.Models;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,10 +17,12 @@ namespace MoviesManagement.Admin.Controllers
     {
 
         public IUserService _userService;
+        public ITicketService _ticketService;
 
-        public UserController(IUserService userService)
+        public UserController(IUserService userService, ITicketService ticketService)
         {
             _userService = userService;
+            _ticketService = ticketService;
         }
 
         public async Task<IActionResult> Index()
@@ -32,7 +35,7 @@ namespace MoviesManagement.Admin.Controllers
         {
             ViewBag.Id = id;
             var user = await _userService.GetUserName(id);
-            if(user == null)
+            if (user == null)
             {
                 ViewBag.ErrorMessage = $"User with Id = {id} cannot be found";
                 return View("NotFound");
@@ -58,7 +61,7 @@ namespace MoviesManagement.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Manage([FromForm] List<ChangeUserRolesViewModel> model, string id)
         {
-            
+
             ViewBag.Id = id;
             var user = await _userService.GetUserName(id);
 
@@ -88,6 +91,36 @@ namespace MoviesManagement.Admin.Controllers
                 ModelState.AddModelError("", "მომხმარებელს ამ როლს ვერ დაუმატებ");
                 return View(model);
             }
+
+            return RedirectToAction("Index");
+        }
+
+        public async Task<IActionResult> UserTickets(string id)
+        {
+            ViewBag.UserName = await _userService.GetUserName(id);
+            if (ViewBag.UserName == null)
+            {
+                ViewBag.ErrorMessage = $"User with Id = {id} cannot be found";
+                return View("NotFound");
+            }
+
+            var userTickets = await _userService.GetUserWithTicketsAsync(id);
+
+            return View(userTickets.Adapt<UserWithTicketsViewModel>());
+        }
+
+        //[Route("{controller}/{action}/{userId}/{movieId}")]
+        [HttpGet]
+        public async Task<IActionResult> CancelTicket(string userId, int movieId)
+        {
+            var cancel = new TicketViewModel
+            {
+                UserId = userId,
+                MovieId = movieId,
+                State = TicketStatus.Cancelled
+            };
+
+            await _ticketService.CancelTicketAsync(cancel.Adapt<TicketModel>());
 
             return RedirectToAction("Index");
         }

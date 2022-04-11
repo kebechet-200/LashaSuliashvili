@@ -6,8 +6,11 @@ namespace MoviesManagement.Services.Abstractions
 {
     public interface IMovieService
     {
-        Task<List<MovieModel>> GetAllAsync();
+        Task<List<MovieModel>> GetAllActiveAsync();
+        Task<MovieModel> GetActiveAsync(int id);
         Task<MovieModel> GetAsync(int id);
+        Task<List<MovieModel>> GetAllAsync();
+
 
     }
 }

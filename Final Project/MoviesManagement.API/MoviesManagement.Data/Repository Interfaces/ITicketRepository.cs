@@ -17,5 +17,7 @@ namespace MoviesManagement.Data.Repository_Interfaces
 
         Task<bool> TicketBoughtExist(Ticket ticket);
         Task<bool> TicketReserveExist(Ticket ticket);
+
+        Task CancelExpiredMovieTickets();
     }
 }

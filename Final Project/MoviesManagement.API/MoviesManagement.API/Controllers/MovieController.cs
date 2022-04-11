@@ -25,7 +25,7 @@ namespace MoviesManagement.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var result = await _movieService.GetAllAsync();
+            var result = await _movieService.GetAllActiveAsync();
             return Ok(result.Adapt<List<MovieDTO>>());
         }
 
@@ -33,7 +33,7 @@ namespace MoviesManagement.API.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            var result = await _movieService.GetAsync(id);
+            var result = await _movieService.GetActiveAsync(id);
             return Ok(result.Adapt<MovieDTO>());
         }
 

@@ -113,7 +113,9 @@ namespace MoviesManagement.Data.Ef.Repositories
 
         public async Task<User> GetUserWithTicketsAsync(string id)
         {
-            return await _baseRepository.Table.Include(x => x.Tickets).ThenInclude(x => x.Movie).SingleOrDefaultAsync(x => x.Id == id);
+            return await _baseRepository.Table.AsNoTracking()
+                .Include(x => x.Tickets).ThenInclude(x => x.Movie)
+                .SingleOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task UpdateAsync(User user)

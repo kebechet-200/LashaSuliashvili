@@ -20,19 +20,36 @@ namespace MoviesManagement.Services.Implementations
             _repo = repo;
         }
 
-        public async Task<List<MovieModel>> GetAllAsync()
+        public async Task<List<MovieModel>> GetAllActiveAsync()
         {
-            var movies = await _repo.GetAllAsync();
+            var movies = await _repo.GetAllActiveAsync();
             return movies.Adapt<List<MovieModel>>();
         }
 
 
-        public async Task<MovieModel> GetAsync(int id)
+        public async Task<MovieModel> GetActiveAsync(int id)
         {
-            var model =  await _repo.GetAsync(id);
+            var model =  await _repo.GetActiveAsync(id);
             if (model == null)
                 throw new MovieIsNotAvailableAtCinema("თქვენ მიერ არჩეული ფილმი ამ დროისთვის მიუწვდომელია");
             return model.Adapt<MovieModel>();// adapt
+        }
+
+        public async Task<List<MovieModel>> GetAllAsync()
+        {
+            var movies = await _repo.GetAllAsync();
+            if (movies == null)
+                throw new MovieIsNotAvailableAtCinema("ფილმები ვერ მოიძებნა");
+            return movies.Adapt<List<MovieModel>>();
+        }
+
+        public async Task<MovieModel> GetAsync(int id)
+        {
+            var movie = await _repo.GetAsync(id);
+            if (movie == null)
+                throw new MovieIsNotAvailableAtCinema("თქვენ მიერ არჩეული ფილმი ამ დროისთვის მიუწვდომელია");
+
+            return movie.Adapt<MovieModel>();
         }
     }
 }

@@ -214,3 +214,238 @@
 2022-04-11 12:28:20.312 +02:00 [INF] Request finished in 1.9048ms 200 text/html;charset=utf-8
 2022-04-11 12:28:30.400 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
 2022-04-11 12:28:30.403 +02:00 [INF] Request finished in 3.3364ms 200 text/html;charset=utf-8
+2022-04-11 13:22:07.647 +02:00 [INF] User profile is available. Using 'C:\Users\Owner\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-04-11 13:22:08.870 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-11 13:22:08.871 +02:00 [INF] Hosting environment: Development
+2022-04-11 13:22:08.871 +02:00 [INF] Content root path: C:\Users\Owner\source\repos\LashaSuliashvili\Final Project\MoviesManagement.API\MoviesManagement.API
+2022-04-11 13:22:09.038 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:22:09.636 +02:00 [INF] Request finished in 603.95ms 200 text/html;charset=utf-8
+2022-04-11 13:22:09.873 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44376/_framework/aspnetcore-browser-refresh.js  
+2022-04-11 13:22:09.879 +02:00 [INF] Request finished in 5.7755ms 200 application/javascript; charset=utf-8
+2022-04-11 13:22:12.051 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:22:12.055 +02:00 [INF] Request finished in 3.5603ms 200 text/html;charset=utf-8
+2022-04-11 13:22:14.657 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44376/swagger/v1/swagger.json  
+2022-04-11 13:22:14.890 +02:00 [INF] Request finished in 232.9521ms 200 application/json;charset=utf-8
+2022-04-11 13:22:25.826 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:22:25.867 +02:00 [INF] Request finished in 42.1226ms 200 text/html;charset=utf-8
+2022-04-11 13:22:36.400 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:22:36.405 +02:00 [INF] Request finished in 4.715ms 200 text/html;charset=utf-8
+2022-04-11 13:22:46.509 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:22:46.512 +02:00 [INF] Request finished in 4.5894ms 200 text/html;charset=utf-8
+2022-04-11 13:22:56.584 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:22:56.587 +02:00 [INF] Request finished in 3.368ms 200 text/html;charset=utf-8
+2022-04-11 13:23:06.684 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:23:06.687 +02:00 [INF] Request finished in 2.8404ms 200 text/html;charset=utf-8
+2022-04-11 13:23:16.739 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:23:16.742 +02:00 [INF] Request finished in 3.3304ms 200 text/html;charset=utf-8
+2022-04-11 13:23:26.824 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:23:26.830 +02:00 [INF] Request finished in 6.5435ms 200 text/html;charset=utf-8
+2022-04-11 13:23:36.895 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:23:36.898 +02:00 [INF] Request finished in 2.4634ms 200 text/html;charset=utf-8
+2022-04-11 13:23:46.971 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:23:46.974 +02:00 [INF] Request finished in 3.1014ms 200 text/html;charset=utf-8
+2022-04-11 13:23:57.024 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:23:57.025 +02:00 [INF] Request finished in 1.8998ms 200 text/html;charset=utf-8
+2022-04-11 13:24:07.086 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:24:07.089 +02:00 [INF] Request finished in 2.3868ms 200 text/html;charset=utf-8
+2022-04-11 13:24:17.158 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:24:17.159 +02:00 [INF] Request finished in 1.9702ms 200 text/html;charset=utf-8
+2022-04-11 13:24:27.241 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:24:27.243 +02:00 [INF] Request finished in 2.1776ms 200 text/html;charset=utf-8
+2022-04-11 13:24:37.289 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:24:37.290 +02:00 [INF] Request finished in 1.6952ms 200 text/html;charset=utf-8
+2022-04-11 13:24:47.365 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:24:47.368 +02:00 [INF] Request finished in 2.9388ms 200 text/html;charset=utf-8
+2022-04-11 13:24:57.454 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:24:57.456 +02:00 [INF] Request finished in 1.4136ms 200 text/html;charset=utf-8
+2022-04-11 13:25:07.528 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:25:07.531 +02:00 [INF] Request finished in 2.7757ms 200 text/html;charset=utf-8
+2022-04-11 13:25:17.588 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:25:17.589 +02:00 [INF] Request finished in 1.397ms 200 text/html;charset=utf-8
+2022-04-11 13:25:27.665 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:25:27.668 +02:00 [INF] Request finished in 3.1784ms 200 text/html;charset=utf-8
+2022-04-11 13:25:37.723 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:25:37.724 +02:00 [INF] Request finished in 1.4244ms 200 text/html;charset=utf-8
+2022-04-11 13:25:47.778 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:25:47.780 +02:00 [INF] Request finished in 1.7604ms 200 text/html;charset=utf-8
+2022-04-11 13:25:57.831 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:25:57.833 +02:00 [INF] Request finished in 2.479ms 200 text/html;charset=utf-8
+2022-04-11 13:26:07.913 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:26:07.914 +02:00 [INF] Request finished in 1.3207ms 200 text/html;charset=utf-8
+2022-04-11 13:26:17.981 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:26:17.985 +02:00 [INF] Request finished in 3.4842ms 200 text/html;charset=utf-8
+2022-04-11 13:26:28.038 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:26:28.040 +02:00 [INF] Request finished in 1.3257ms 200 text/html;charset=utf-8
+2022-04-11 13:26:38.102 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:26:38.104 +02:00 [INF] Request finished in 1.5202ms 200 text/html;charset=utf-8
+2022-04-11 13:26:48.154 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:26:48.156 +02:00 [INF] Request finished in 2.7458ms 200 text/html;charset=utf-8
+2022-04-11 13:26:58.217 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:26:58.220 +02:00 [INF] Request finished in 3.2829ms 200 text/html;charset=utf-8
+2022-04-11 13:27:08.283 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:27:08.284 +02:00 [INF] Request finished in 1.2671ms 200 text/html;charset=utf-8
+2022-04-11 13:27:18.359 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:27:18.360 +02:00 [INF] Request finished in 0.9252ms 200 text/html;charset=utf-8
+2022-04-11 13:27:28.407 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 13:27:28.408 +02:00 [INF] Request finished in 0.8392ms 200 text/html;charset=utf-8
+2022-04-11 23:32:19.390 +02:00 [INF] User profile is available. Using 'C:\Users\Owner\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-04-11 23:32:20.971 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-11 23:32:20.972 +02:00 [INF] Hosting environment: Development
+2022-04-11 23:32:20.972 +02:00 [INF] Content root path: C:\Users\Owner\source\repos\LashaSuliashvili\Final Project\MoviesManagement.API\MoviesManagement.API
+2022-04-11 23:32:21.153 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44376/swagger/index.html  
+2022-04-11 23:32:21.153 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 23:32:21.366 +02:00 [INF] Request finished in 220.6017ms 200 text/html;charset=utf-8
+2022-04-11 23:32:21.693 +02:00 [INF] Request finished in 548.3169ms 200 text/html;charset=utf-8
+2022-04-11 23:32:22.220 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44376/swagger/swagger-ui.css  
+2022-04-11 23:32:22.232 +02:00 [INF] The file /swagger-ui.css was not modified
+2022-04-11 23:32:22.239 +02:00 [INF] Request finished in 21.5354ms 304 text/css
+2022-04-11 23:32:22.250 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44376/swagger/swagger-ui-bundle.js  
+2022-04-11 23:32:22.252 +02:00 [INF] The file /swagger-ui-bundle.js was not modified
+2022-04-11 23:32:22.252 +02:00 [INF] Request finished in 2.6658ms 304 application/javascript
+2022-04-11 23:32:22.268 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44376/swagger/swagger-ui-standalone-preset.js  
+2022-04-11 23:32:22.269 +02:00 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2022-04-11 23:32:22.270 +02:00 [INF] Request finished in 1.7718ms 304 application/javascript
+2022-04-11 23:32:22.292 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44376/_framework/aspnetcore-browser-refresh.js  
+2022-04-11 23:32:22.299 +02:00 [INF] Request finished in 6.948ms 200 application/javascript; charset=utf-8
+2022-04-11 23:32:24.874 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44376/swagger/v1/swagger.json  
+2022-04-11 23:32:25.049 +02:00 [INF] Request finished in 175.7379ms 200 application/json;charset=utf-8
+2022-04-11 23:33:16.521 +02:00 [INF] User profile is available. Using 'C:\Users\Owner\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-04-11 23:33:17.660 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-11 23:33:17.670 +02:00 [INF] Hosting environment: Development
+2022-04-11 23:33:17.671 +02:00 [INF] Content root path: C:\Users\Owner\source\repos\LashaSuliashvili\Final Project\MoviesManagement.API\MoviesManagement.API
+2022-04-11 23:33:17.732 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44376/swagger/index.html  
+2022-04-11 23:33:18.227 +02:00 [INF] Request finished in 501.2876ms 200 text/html;charset=utf-8
+2022-04-11 23:33:18.624 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44376/_framework/aspnetcore-browser-refresh.js  
+2022-04-11 23:33:18.632 +02:00 [INF] Request finished in 7.9733ms 200 application/javascript; charset=utf-8
+2022-04-11 23:33:20.250 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 23:33:20.335 +02:00 [INF] Request finished in 84.6718ms 200 text/html;charset=utf-8
+2022-04-11 23:33:22.900 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44376/swagger/v1/swagger.json  
+2022-04-11 23:33:23.096 +02:00 [INF] Request finished in 196.1668ms 200 application/json;charset=utf-8
+2022-04-11 23:33:32.845 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 23:33:32.848 +02:00 [INF] Request finished in 3.3781ms 200 text/html;charset=utf-8
+2022-04-11 23:33:42.942 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 23:33:42.947 +02:00 [INF] Request finished in 4.7246ms 200 text/html;charset=utf-8
+2022-04-11 23:33:52.201 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44376/api/Ticket/Buy application/json 1
+2022-04-11 23:33:52.209 +02:00 [INF] 200 Succeed!
+2022-04-11 23:33:52.350 +02:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2022-04-11 23:33:52.360 +02:00 [INF] Authorization failed.
+2022-04-11 23:33:52.364 +02:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2022-04-11 23:33:52.365 +02:00 [INF] HTTP POST /api/Ticket/Buy responded 302 in 152.2481 ms
+2022-04-11 23:33:52.368 +02:00 [INF] Request finished in 184.2644ms 302 
+2022-04-11 23:33:52.371 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44376/Account/Login?ReturnUrl=%2Fapi%2FTicket%2FBuy  
+2022-04-11 23:33:52.371 +02:00 [INF] 200 Succeed!
+2022-04-11 23:33:52.423 +02:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2022-04-11 23:33:52.424 +02:00 [INF] HTTP GET /Account/Login responded 404 in 52.1387 ms
+2022-04-11 23:33:52.425 +02:00 [INF] Request finished in 53.5894ms 404 
+2022-04-11 23:33:53.078 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 23:33:53.083 +02:00 [INF] Request finished in 4.554ms 200 text/html;charset=utf-8
+2022-04-11 23:34:03.174 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 23:34:03.178 +02:00 [INF] Request finished in 3.7698ms 200 text/html;charset=utf-8
+2022-04-11 23:34:13.250 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 23:34:13.252 +02:00 [INF] Request finished in 2.4009ms 200 text/html;charset=utf-8
+2022-04-11 23:34:18.211 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44376/api/Ticket/Buy application/json 1
+2022-04-11 23:34:18.215 +02:00 [INF] 200 Succeed!
+2022-04-11 23:34:18.266 +02:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2022-04-11 23:34:18.267 +02:00 [INF] Authorization failed.
+2022-04-11 23:34:18.267 +02:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2022-04-11 23:34:18.267 +02:00 [INF] HTTP POST /api/Ticket/Buy responded 302 in 51.3793 ms
+2022-04-11 23:34:18.268 +02:00 [INF] Request finished in 56.5352ms 302 
+2022-04-11 23:34:18.270 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44376/Account/Login?ReturnUrl=%2Fapi%2FTicket%2FBuy  
+2022-04-11 23:34:18.271 +02:00 [INF] 200 Succeed!
+2022-04-11 23:34:18.318 +02:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2022-04-11 23:34:18.318 +02:00 [INF] HTTP GET /Account/Login responded 404 in 47.3009 ms
+2022-04-11 23:34:18.318 +02:00 [INF] Request finished in 48.3722ms 404 
+2022-04-11 23:34:23.314 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 23:34:23.318 +02:00 [INF] Request finished in 3.6049ms 200 text/html;charset=utf-8
+2022-04-11 23:34:33.390 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 23:34:33.392 +02:00 [INF] Request finished in 2.2979ms 200 text/html;charset=utf-8
+2022-04-11 23:34:41.240 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44376/api/User/Login application/json 55
+2022-04-11 23:34:41.240 +02:00 [INF] 200 Succeed!
+2022-04-11 23:34:41.292 +02:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2022-04-11 23:34:41.292 +02:00 [INF] Executing endpoint 'MoviesManagement.API.Controllers.UserController.Login (MoviesManagement.API)'
+2022-04-11 23:34:41.345 +02:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(MoviesManagement.API.Models.Request.AccountLoginDTO) on controller MoviesManagement.API.Controllers.UserController (MoviesManagement.API).
+2022-04-11 23:34:43.061 +02:00 [INF] Entity Framework Core 5.0.14 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-04-11 23:34:43.488 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 23:34:43.490 +02:00 [INF] Request finished in 2.0188ms 200 text/html;charset=utf-8
+2022-04-11 23:34:44.382 +02:00 [INF] Executed DbCommand (60ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-04-11 23:34:44.503 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2022-04-11 23:34:44.607 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2022-04-11 23:34:44.644 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2022-04-11 23:34:44.655 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2022-04-11 23:34:44.677 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2022-04-11 23:34:44.690 +02:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-04-11 23:34:45.274 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2022-04-11 23:34:45.283 +02:00 [INF] Executed action MoviesManagement.API.Controllers.UserController.Login (MoviesManagement.API) in 3931.8148ms
+2022-04-11 23:34:45.283 +02:00 [INF] Executed endpoint 'MoviesManagement.API.Controllers.UserController.Login (MoviesManagement.API)'
+2022-04-11 23:34:45.284 +02:00 [INF] HTTP POST /api/User/Login responded 200 in 4044.0577 ms
+2022-04-11 23:34:45.289 +02:00 [INF] Request finished in 4049.6717ms 200 text/plain; charset=utf-8
+2022-04-11 23:34:53.575 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 23:34:53.577 +02:00 [INF] Request finished in 2.5455ms 200 text/html;charset=utf-8
+2022-04-11 23:34:56.967 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44376/api/Ticket/Buy application/json 1
+2022-04-11 23:34:56.967 +02:00 [INF] 200 Succeed!
+2022-04-11 23:34:56.978 +02:00 [INF] Authorization was successful.
+2022-04-11 23:34:56.978 +02:00 [INF] Executing endpoint 'MoviesManagement.API.Controllers.TicketController.Buy (MoviesManagement.API)'
+2022-04-11 23:34:56.990 +02:00 [INF] Route matched with {action = "Buy", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Buy(Int32) on controller MoviesManagement.API.Controllers.TicketController (MoviesManagement.API).
+2022-04-11 23:34:57.024 +02:00 [INF] Entity Framework Core 5.0.14 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-04-11 23:35:00.859 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [m].[Id], [m].[Description], [m].[Image], [m].[IsActive], [m].[IsExpired], [m].[Name], [m].[StartDate]
+FROM [Movies] AS [m]
+WHERE [m].[Id] = @__id_0
+2022-04-11 23:35:01.694 +02:00 [INF] Executed action MoviesManagement.API.Controllers.TicketController.Buy (MoviesManagement.API) in 4703.5545ms
+2022-04-11 23:35:01.830 +02:00 [INF] Executed endpoint 'MoviesManagement.API.Controllers.TicketController.Buy (MoviesManagement.API)'
+2022-04-11 23:35:02.127 +02:00 [ERR] HTTP POST /api/Ticket/Buy responded 500 in 5159.3997 ms
+MoviesManagement.Services.Exceptions.MovieAlreadyStartedException: ფილმი უკვე დაიწყო
+   at MoviesManagement.Services.Implementations.TicketService.BuyTicketAsync(TicketModel ticket) in C:\Users\Owner\source\repos\LashaSuliashvili\Final Project\MoviesManagement.API\MoviesManagement.Services\Implementations\TicketService.cs:line 32
+   at MoviesManagement.API.Controllers.TicketController.Buy(Int32 movieId) in C:\Users\Owner\source\repos\LashaSuliashvili\Final Project\MoviesManagement.API\MoviesManagement.API\Controllers\TicketController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-04-11 23:35:02.760 +02:00 [INF] Request finished in 5792.984ms 500 application/json
+2022-04-11 23:35:03.689 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 23:35:03.753 +02:00 [INF] Request finished in 64.1173ms 200 text/html;charset=utf-8
+2022-04-11 23:35:22.696 +02:00 [INF] User profile is available. Using 'C:\Users\Owner\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-04-11 23:35:23.528 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-11 23:35:23.529 +02:00 [INF] Hosting environment: Development
+2022-04-11 23:35:23.529 +02:00 [INF] Content root path: C:\Users\Owner\source\repos\LashaSuliashvili\Final Project\MoviesManagement.API\MoviesManagement.API
+2022-04-11 23:35:23.714 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44376/swagger/index.html  
+2022-04-11 23:35:24.211 +02:00 [INF] Request finished in 509.6152ms 200 text/html;charset=utf-8
+2022-04-11 23:35:24.984 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44376/_framework/aspnetcore-browser-refresh.js  
+2022-04-11 23:35:25.047 +02:00 [INF] Request finished in 62.9524ms 200 application/javascript; charset=utf-8
+2022-04-11 23:35:25.297 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44376/swagger/v1/swagger.json  
+2022-04-11 23:35:25.550 +02:00 [INF] Request finished in 252.6548ms 200 application/json;charset=utf-8
+2022-04-11 23:35:27.501 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/index.html  
+2022-04-11 23:35:27.508 +02:00 [INF] Request finished in 7.0873ms 200 text/html;charset=utf-8
+2022-04-11 23:35:31.311 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44376/api/Ticket/Buy application/json 1
+2022-04-11 23:35:31.316 +02:00 [INF] 200 Succeed!
+2022-04-11 23:35:31.579 +02:00 [INF] Authorization was successful.
+2022-04-11 23:35:31.579 +02:00 [INF] Executing endpoint 'MoviesManagement.API.Controllers.TicketController.Buy (MoviesManagement.API)'
+2022-04-11 23:35:31.629 +02:00 [INF] Route matched with {action = "Buy", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Buy(Int32) on controller MoviesManagement.API.Controllers.TicketController (MoviesManagement.API).
+2022-04-11 23:35:32.633 +02:00 [INF] Entity Framework Core 5.0.14 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
