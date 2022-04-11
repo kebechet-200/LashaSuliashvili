@@ -25,8 +25,6 @@ namespace MoviesManagement.API.Infrastructure.Middlewares
         {
             try
             {
-                await _next.Invoke(context);
-
                 if (context.Response.StatusCode >= serverErrors && context.Response.StatusCode < 600)
                     _logger.LogError($"{context.Response.StatusCode} server error occured");
 
@@ -35,6 +33,8 @@ namespace MoviesManagement.API.Infrastructure.Middlewares
 
                 if (context.Response.StatusCode >= succeed && context.Response.StatusCode < 300)
                     _logger.LogInformation($"{context.Response.StatusCode} Succeed!");
+
+                await _next.Invoke(context);
             }
             catch (Exception ex)
             {

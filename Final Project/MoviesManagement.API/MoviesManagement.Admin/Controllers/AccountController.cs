@@ -23,7 +23,7 @@ namespace MoviesManagement.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel model)
+        public async Task<IActionResult> Login(LoginViewModel model, string returnUrl)
         {
             if (!ModelState.IsValid)
                 return View();
@@ -38,6 +38,9 @@ namespace MoviesManagement.Admin.Controllers
                 ModelState.AddModelError("Login", "Username Or Password Is Incorrect");
                 return View();
             }
+
+            if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+                return Redirect(returnUrl);
 
             return RedirectToAction("Index", "Home");
         }

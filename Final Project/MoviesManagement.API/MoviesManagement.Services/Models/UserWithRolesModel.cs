@@ -4,9 +4,9 @@ using System.Text;
 
 namespace MoviesManagement.Services.Models
 {
-    public class UserRolesModel
+    public class UserWithRolesModel
     {
-        public string UserId { get; set; }
+        public string Id { get; set; }
         public string UserName { get; set; }
         public List<string> Roles { get; set; }
     }

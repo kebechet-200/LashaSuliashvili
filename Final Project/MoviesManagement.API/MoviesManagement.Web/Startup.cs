@@ -11,7 +11,6 @@ using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 using MoviesManagement.Domain.POCO;
 using MoviesManagement.PersistanceDB;
-using MoviesManagement.Web.CustomHealthCheck;
 using MoviesManagement.Web.Infrastructure.Extensions;
 using System;
 using System.Collections.Generic;
@@ -40,18 +39,6 @@ namespace MoviesManagement.Web
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<AppDbContext>();
-
-
-            services.AddHealthChecks()
-                .AddDbContextCheck<AppDbContext>()
-                .AddCheck<ApiHealthCheck>("Api Service")
-                .AddCheck<AdminHealthCheck>("Admin Panel");
-
-            services.AddHealthChecksUI(options =>
-            {
-                options.SetEvaluationTimeInSeconds(10);
-                options.AddHealthCheckEndpoint("Check App Health", "/health");
-            }).AddInMemoryStorage();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -81,13 +68,6 @@ namespace MoviesManagement.Web
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapHealthChecks("/health", new HealthCheckOptions()
-                {
-                    Predicate = _ => true,
-                    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
-                });
-
-                endpoints.MapHealthChecksUI();
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

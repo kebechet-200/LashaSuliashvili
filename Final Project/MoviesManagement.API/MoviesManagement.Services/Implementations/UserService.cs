@@ -1,4 +1,5 @@
 ﻿using Mapster;
+using Microsoft.AspNetCore.Identity;
 using MoviesManagement.Data.Repository_Interfaces;
 using MoviesManagement.Domain.POCO;
 using MoviesManagement.Services.Abstractions;
@@ -22,6 +23,11 @@ namespace MoviesManagement.Services.Implementations
             _repo = repo;
         }
 
+        public async Task<IdentityResult> AddToRolesAsync(string userName, IEnumerable<string> roles)
+        {
+            return await _repo.AddToRolesAsync(userName, roles);
+        }
+
         public async Task<string> AuthenticateAsync(UserModel user)
         {
             var userEntity = user.Adapt<User>();
@@ -36,10 +42,7 @@ namespace MoviesManagement.Services.Implementations
             return entity.UserId;
         }
 
-        public Task ChangeRoleAsync(string id)
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public async Task<RegisterStatus> CreateAsync(UserModel user)
         {
@@ -58,6 +61,11 @@ namespace MoviesManagement.Services.Implementations
             await _repo.DeleteAsync(id);
         }
 
+        public async Task<IdentityResult> DeleteUserRoles(string userName, IEnumerable<string> roles)
+        {
+            return await _repo.DeleteUserRoles(userName, roles);
+        }
+
         public async Task<List<UserModel>> GetAllAsync()
         {
             var users = await _repo.GetAllAsync();
@@ -66,13 +74,21 @@ namespace MoviesManagement.Services.Implementations
             return users.Adapt<List<UserModel>>();
         }
 
-        public async Task<List<UserRolesModel>> GetAllUserWithRoles()
+        public async Task<List<RolesModel>> GetAllRolesAsync()
+        {
+            var roles = await _repo.GetRoles();
+            if (roles == null)
+                throw new RolesNotFoundException("როლები ვერ იძებნება");
+            return roles.Adapt<List<RolesModel>>();
+        }
+
+        public async Task<List<UserWithRolesModel>> GetAllUserWithRoles()
         {
             var usersWithRoles = await _repo.GetAllUserWithRoles();
             if (usersWithRoles == null)
                 throw new UserDoesNotExist("მომხმარებლები ვერ მოიძებნა");
 
-            return usersWithRoles.Adapt<List<UserRolesModel>>();
+            return usersWithRoles.Adapt<List<UserWithRolesModel>>();
         }
 
         public async Task<UserModel> GetAsync(string id)
@@ -85,6 +101,16 @@ namespace MoviesManagement.Services.Implementations
             return user.Adapt<UserModel>();
         }
 
+        public async Task<string> GetUserName(string id)
+        {
+            return await _repo.GetUserName(id);
+        }
+
+        public async Task<List<string>> GetUserRolesAsync(string userId)
+        {
+            return await _repo.GetUserRolesAsync(userId);
+        }
+
         public async Task<UserModel> GetUserWithTicketsAsync(string id)
         {
             if (id == null || !await _repo.Exists(id))
@@ -93,6 +119,11 @@ namespace MoviesManagement.Services.Implementations
             var usersWithTickets = await _repo.GetUserWithTicketsAsync(id);
 
             return usersWithTickets.Adapt<UserModel>();
+        }
+
+        public async Task<bool> IsInRole(string userName, string roleName)
+        {
+            return await _repo.IsInRole(userName, roleName);
         }
 
         public async Task SignoutAsync()

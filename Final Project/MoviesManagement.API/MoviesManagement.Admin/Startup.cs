@@ -1,4 +1,6 @@
+using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
@@ -9,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using MoviesManagement.Admin.Infrastructure.Extensions;
 using MoviesManagement.Domain.POCO;
 using MoviesManagement.PersistanceDB;
+using MoviesManagement.Web.CustomHealthCheck;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,6 +36,17 @@ namespace MoviesManagement.Admin
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<AppDbContext>();
+
+            services.AddHealthChecks()
+                .AddDbContextCheck<AppDbContext>("Database")
+                .AddCheck<ApiHealthCheck>("Api Service")
+                .AddCheck<UserHealthCheck>("User Panel");
+
+            services.AddHealthChecksUI(options =>
+            {
+                options.SetEvaluationTimeInSeconds(10);
+                options.AddHealthCheckEndpoint("Check App Health", "/health");
+            }).AddInMemoryStorage();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,6 +73,14 @@ namespace MoviesManagement.Admin
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapHealthChecks("/health", new HealthCheckOptions()
+                {
+                    Predicate = _ => true,
+                    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+                });
+
+                endpoints.MapHealthChecksUI();
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

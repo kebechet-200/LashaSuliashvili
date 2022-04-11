@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using MoviesManagement.Data.Repository_Interfaces;
 using MoviesManagement.Domain.POCO;
 using System.Collections.Generic;
+using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
@@ -79,14 +80,15 @@ namespace MoviesManagement.Data.Ef.Repositories
 
         public async Task<List<UserRoles>> GetAllUserWithRoles()
         {
-            var users = await _baseRepository.GetAllAsync();
+            var users = await this.GetAllAsync();
             var userRoles = new List<UserRoles>();
 
             foreach (var user in users)
             {
                 var tempUserRoles = new UserRoles();
+                tempUserRoles.Id = user.Id;
                 tempUserRoles.UserName = user.UserName;
-                tempUserRoles.Roles = await GetUserRolesAsync(user.Id);
+                tempUserRoles.Roles = await this.GetUserRolesAsync(user.Id);
 
                 userRoles.Add(tempUserRoles);
             }
@@ -106,7 +108,7 @@ namespace MoviesManagement.Data.Ef.Repositories
 
         public async Task<User> GetAsync(string id)
         {
-            return await _baseRepository.Table.SingleOrDefaultAsync(x => x.Id == id);
+            return await _baseRepository.Table.AsNoTracking().SingleOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<User> GetUserWithTicketsAsync(string id)
@@ -126,11 +128,35 @@ namespace MoviesManagement.Data.Ef.Repositories
                 await _baseRepository.RemoveAsync(user);
         }
 
-        public async Task ChangeRoleAsync(string id)
+        public async Task<List<IdentityRole>> GetRoles()
         {
-            var user = await this.GetAsync(id);
+            return await _roleManager.Roles.ToListAsync();
+        }
+        public async Task<bool> IsInRole(string userName, string roleName)
+        {
+            var user = await _userManager.FindByNameAsync(userName);
+            return await _userManager.IsInRoleAsync(user, roleName);
+        }
 
-            var roles = await _userManager.GetRolesAsync(user);
+        public async Task<IdentityResult> DeleteUserRoles(string userName, IEnumerable<string> roles)
+        {
+
+            var user = await _userManager.FindByNameAsync(userName);
+
+            return await _userManager.RemoveFromRolesAsync(user, roles); 
+        }
+
+        public async Task<IdentityResult> AddToRolesAsync(string userName, IEnumerable<string> roles)
+        {
+            var user = await _userManager.FindByNameAsync(userName);
+
+            return await _userManager.AddToRolesAsync(user, roles);
+        }
+
+        public async Task<string> GetUserName(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            return user.UserName;
         }
     }
 }
