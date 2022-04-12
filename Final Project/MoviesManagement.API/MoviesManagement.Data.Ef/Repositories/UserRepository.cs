@@ -82,6 +82,7 @@ namespace MoviesManagement.Data.Ef.Repositories
         {
             var users = await this.GetAllAsync();
             var userRoles = new List<UserRoles>();
+            
 
             foreach (var user in users)
             {

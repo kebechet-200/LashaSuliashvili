@@ -13,10 +13,12 @@ namespace MoviesManagement.Data.Ef.Repositories
     public class TicketRepository : ITicketRepository
     {
         private readonly IBaseRepository<Ticket> _repo;
+        private readonly IMovieRepository _movieRepo;
 
-        public TicketRepository(IBaseRepository<Ticket> repo)
+        public TicketRepository(IBaseRepository<Ticket> repo, IMovieRepository movieRepo)
         {
             _repo = repo;
+            _movieRepo = movieRepo;
         }
 
         public async Task BuyTicketAsync(Ticket ticket)
@@ -44,10 +46,35 @@ namespace MoviesManagement.Data.Ef.Repositories
             }
         }
 
+        public int UserTicketId(Movie movie, string userId)
+        {
+            var userTicket = movie.Tickets.Where(x => x.UserId == userId).First();
+            return userTicket.Id;
+        }
+
+        public bool UserHasTicket(Movie movie, string userId)
+        {
+            return movie.Tickets.Any(x => x.UserId == userId);
+        }
+
+        public async Task<Movie> GetMovie(int id)
+        {
+            return await _movieRepo.GetAsync(id);
+        }
+
+
         public async Task TicketReservationAsync(Ticket ticket)
         {
-            await _repo.AddAsync(ticket);
-
+            var movieTicket = await GetMovie(ticket.MovieId);
+            if (this.UserHasTicket(movieTicket, ticket.UserId))
+            {
+                ticket.State = TicketEnum.Reserved;
+                
+                ticket.Id = this.UserTicketId(movieTicket, ticket.UserId);
+                await _repo.UpdateAsync(ticket);
+            }
+            else
+                await _repo.AddAsync(ticket);
         }
 
         public async Task<bool> TicketBoughtExist(Ticket ticket)

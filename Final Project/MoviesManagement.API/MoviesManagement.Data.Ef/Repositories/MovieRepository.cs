@@ -36,7 +36,7 @@ namespace MoviesManagement.Data.Ef.Repositories
 
         public async Task<Movie> GetAsync(int id)
         {
-            return await _repo.Table.Include(x => x.Tickets).SingleOrDefaultAsync(x => x.Id == id && !x.IsExpired);
+            return await _repo.Table.AsNoTracking().Include(x => x.Tickets).SingleOrDefaultAsync(x => x.Id == id && !x.IsExpired);
         }
 
         public async Task<Movie> GetActiveAsync(int id)
