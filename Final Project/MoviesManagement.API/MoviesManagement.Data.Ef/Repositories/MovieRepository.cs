@@ -58,5 +58,33 @@ namespace MoviesManagement.Data.Ef.Repositories
                 await _repo.UpdateAsync(movie);
             }
         }
+
+        public async Task UpdateAsync(Movie movie)
+        {
+            await _repo.UpdateAsync(movie);
+        }
+
+        public async Task<List<Movie>> GetAllNonActiveAsync()
+        {
+            return await _repo.Table.Where(x => !x.IsActive && !x.IsExpired).ToListAsync();
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            var movie = await this.GetAsync(id);
+            await _repo.RemoveAsync(movie);
+        }
+
+        public async Task CreateAsync(Movie movie)
+        {
+            await _repo.AddAsync(movie);
+        }
+
+        public async Task MakeActive(int id)
+        {
+            var movie = await this.GetAsync(id);
+            movie.IsActive = true;
+            await _repo.UpdateAsync(movie);
+        }
     }
 }
