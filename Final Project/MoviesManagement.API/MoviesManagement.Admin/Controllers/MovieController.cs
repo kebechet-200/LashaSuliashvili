@@ -90,6 +90,9 @@ namespace MoviesManagement.Admin.Controllers
             return View(movies.Adapt<List<MovieViewModel>>());
         }
 
+
+        [Authorize(Roles = "Admin")]
+
         [HttpGet]
         public async Task<IActionResult> MakeActive(int id)
         {

@@ -1,4 +1,4 @@
-﻿@model List<GetUserWithRolesViewModel>;
+﻿@model PageModelList<GetUserWithRolesViewModel>;
 
 
 <h1>User Roles</h1>
@@ -26,3 +26,17 @@
         }
     </tbody>
 </table>
+
+@{
+    var prevDisabled = !Model.PreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.NextPage ? "disabled" : "";
+}
+
+<a asp-controller="User" asp-action="Index" asp-route-pageNumber="@(Model.PageIndex - 1)" class="btn btn-primary @prevDisabled">
+    Previous
+</a>
+
+<a asp-controller="User" asp-action="Index" asp-route-pageNumber="@(Model.PageIndex + 1)" class="btn btn-primary @nextDisabled">
+    Next
+</a>
+

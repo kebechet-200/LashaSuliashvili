@@ -25,10 +25,11 @@ namespace MoviesManagement.Admin.Controllers
             _ticketService = ticketService;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int pageNumber = 1)
         {
             var users = await _userService.GetAllUserWithRoles();
-            return View(users.Adapt<List<GetUserWithRolesViewModel>>());
+            var usersWithRoles = users.Adapt<List<GetUserWithRolesViewModel>>().AsQueryable();
+            return View(PageModelList<GetUserWithRolesViewModel>.Create(usersWithRoles, pageNumber, 5));
         }
 
         public async Task<IActionResult> Manage(string id)
