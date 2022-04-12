@@ -15,6 +15,10 @@ namespace MoviesManagement.Admin.Infrastructure.Mapping
                 .NewConfig()
                 .TwoWays();
 
+            TypeAdapterConfig<MovieViewModel, MovieModel>
+                .NewConfig()
+                .TwoWays();
+
             TypeAdapterConfig<UserModel, User>
                 .NewConfig()
                 .TwoWays();

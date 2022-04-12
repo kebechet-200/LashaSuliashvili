@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MoviesManagement.Admin.Models
 {
@@ -10,7 +11,9 @@ namespace MoviesManagement.Admin.Models
         public string Description { get; set; }
 
         public string Image { get; set; }
+        [DataType(DataType.DateTime)]
         public DateTime StartDate { get; set; }
+
         public bool IsActive { get; set; }
     }
 }

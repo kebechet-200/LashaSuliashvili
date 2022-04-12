@@ -11,6 +11,14 @@ namespace MoviesManagement.Services.Abstractions
         Task<MovieModel> GetAsync(int id);
         Task<List<MovieModel>> GetAllAsync();
 
+        Task UpdateAsync(MovieModel model);
 
+        Task DeleteAsync(int id);
+
+        Task CreateAsync(MovieModel model);
+
+        Task MakeActive(int id);
+
+        Task<List<MovieModel>> GetAllNonActiveAsync();
     }
 }
